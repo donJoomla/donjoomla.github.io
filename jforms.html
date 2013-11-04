@@ -10,14 +10,13 @@ demo: "../"
 docs: "../"
 download: "../"
 ---
-
 <div class="page-header">
   <h1>Getting Started</h1>
 </div>
 <p>Install the module in Joomla, then open it in the module manager. Publish it to the position and pages you require, then click the options tabs where you will see following settings:</p>
 <h3>Basic Options</h3>
 <p><strong>Form</strong><br>
-  Select a form XML to use for your module. To use your own forms upload them to /modules/mod_jforms/forms/.</p>
+  Select a form XML to use for your module. To use your own forms upload them to <code>/modules/mod_jforms/forms/</code>.</p>
 <p><strong>Introduction text</strong><br>
   Enter text to display above the form</p>
 <p><strong>Thank you message</strong><br>
@@ -30,26 +29,25 @@ download: "../"
   Choose whether to send the form data via email. If you select no all following settings will be ignored.</p>
 <p><strong>Email destination</strong><br>
   Enter a valid email address where the form data will be sent to.<br>
-  Whilst you could have the <strong>destination email</strong> static eg. you@example.com it can also be dynamic to be sent to a user entered value.<br>
-  If for example you want to send the email to the user and you have an email form field you could enter {email}.</p>
+  Whilst you could have the <strong>destination email</strong> static eg. <code>you@example.com</code> it can also be dynamic to be sent to a user entered value.<br>
+  If for example you want to send the email to the user and you have an email form field you could enter <code>{email}</code>.</p>
 <p><strong>Email subject</strong><br>
-  Enter a subject for the email that will be sent. The same goes for the <strong>email subject</strong> as for the email destination so it could be static eg.Website Enquiry, or use form data eg. {subject}.</p>
+  Enter a subject for the email that will be sent. The same goes for the <strong>email subject</strong> as for the email destination so it could be static eg. <code>Website Enquiry</code>, or use form data eg. <code>{subject}</code>.</p>
 <p><strong>Email text</strong><br>
-  This is where you create the template of the email. It supports HTML and just like the destination &amp; subject you can use placeholders for the form data for example {email}. To display all the form data in a list use {fields}.<br>
+  This is where you create the template of the email. It supports HTML and just like the destination &amp; subject you can use placeholders for the form data for example <code>{email}</code>. To display all the form data in a list use <code>{fields}</code>.<br>
   If for example your form fields were name, email, subject &amp; message you could format your email in the following way:</p>
-<pre>&lt;p&gt;You have just received a new message from &lt;strong&gt;{name}&lt;/strong&gt; - {email} regarding {subject}&lt;/p&gt;  &lt;p&gt;{message}&lt;/p&gt;  </pre>
+<pre><code>&lt;p&gt;You have just received a new message from &lt;strong&gt;{name}&lt;/strong&gt; - {email} regarding {subject}&lt;/p&gt;
+&lt;p&gt;{message}&lt;/p&gt;  </code></pre>
 <h3>AJAX Settings</h3>
 <p><strong>Use Ajax to send form</strong><br>
   Select this option to submit the form without reloading the page.</p>
 <p><strong>Custom Functions</strong><br>
   Execute custom JavaScript functions. To use your own functions upload them to /modules/mod_jforms/functions/.</p>
-  
-  <div class="page-header">
-   <h1>Creating a custom form</h1>
+<div class="page-header">
+  <h1>Creating a custom form</h1>
 </div>
-      <p>The module builds forms from XML using Joomla's inbuilt JForm class. 
-Here is an example of a form XML file.</p>
-
+<p>The module builds forms from XML using Joomla's inbuilt JForm class. 
+  Here is an example of a form XML file.</p>
 <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;  
 &lt;form&gt;  
     &lt;fields&gt;  
@@ -62,10 +60,7 @@ Here is an example of a form XML file.</p>
    &lt;/fields&gt;  
 &lt;/form&gt;
 </code></pre>
-
 <p>This would output a form with fields for name, email &amp; message.</p>
-
 <p>To add extra form fields simply add them within the fieldset tags following the same format.<br>
-For a list of all the available field types visit <a href="http://docs.joomla.org/Standard_form_field_types">http://docs.joomla.org/Standard_form_field_types</a></p>
-
+  For a list of all the available field types visit <a href="http://docs.joomla.org/Standard_form_field_types">http://docs.joomla.org/Standard_form_field_types</a></p>
 <p>Once you have created your XML file, upload it to <code>/modules/mod_jforms/forms/</code>, then open jForms in the module manager and click on the Options tab. Your newly created form is now available in the form dropdown on the basic options in the module manager.</p>
