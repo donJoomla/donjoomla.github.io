@@ -4,70 +4,55 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     {% include header.html %}
   </head>
+<!-- NAVBAR
+================================================== -->
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
 
     <!-- Docs master nav -->
     {% include nav-main.html %}
-
-    <!-- Docs page layout -->
-    <div class="bs-header" id="content">
-      <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.lead }}</p>
-      </div>
-    </div>
-
-
-    <div class="container bs-docs-container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="bs-sidebar hidden-print" role="complementary">
-            <ul class="nav bs-sidenav">
-              {% if page.slug == "getting-started" %}
-                {% include nav-getting-started.html %}
-              {% elsif page.slug == "css" %}
-                {% include nav-css.html %}
-              {% elsif page.slug == "components" %}
-                {% include nav-components.html %}
-              {% elsif page.slug == "js" %}
-                {% include nav-javascript.html %}
-              {% elsif page.slug == "customize" %}
-                {% include nav-customize.html %}
-              {% elsif page.slug == "about" %}
-                {% include nav-about.html %}
+  
+  
+  <!-- Carousel
+    ================================================== -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="container">
+          <div class="carousel-caption">
+            <div class="pull-right text-right">
+              {% if page.type == "extension" %}
+			  <p>Latest release: <span class="label label-success">v{{ page.version }}</span><br>
+                Compatible with: <img src="http://docs.joomla.org/images/5/53/Compat_icon_2_5.png" alt=""> <img src="http://docs.joomla.org/images/d/d6/Compat_icon_3_1.png" alt=""></p>
+              <a class="btn btn-lg btn-default" href="{{ page.demo }}" role="button">Demo</a> <a class="btn btn-lg btn-default" href="{{ page.docs }}" role="button">Documentation</a> <a class="btn btn-lg btn-success" href="{{ page.download }}" role="button"><span class="glyphicon glyphicon-save"></span> Download now</a> </div>
               {% endif %}
-            </ul>
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.lead }}</p>
           </div>
         </div>
-        <div class="col-md-9" role="main">
-          {{ content }}
-        </div>
       </div>
-
     </div>
-
-    <!-- Footer
-    ================================================== -->
-    <footer class="bs-footer" role="contentinfo">
-      <div class="container">
-        {% include social-buttons.html %}
-
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="footer-links">
-          <li>Currently v{{ site.current_version }}</li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ page.base_url }}2.3.2/">Bootstrap 2.3.2 docs</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ site.blog }}">Blog</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ site.repo }}/issues?state=open">Issues</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ site.repo }}/releases">Releases</a></li>
-        </ul>
+  </div>
+  <!-- /.carousel -->
+  
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar"><div id="toc"></div></div>
       </div>
-    </footer>
+      <div class="col-md-9" role="main">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->  
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2013 Adam Bouqdib. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </div>
+  </footer>
 
     <!-- JS and analytics only. -->
     {% include footer.html %}

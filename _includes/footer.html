@@ -1,20 +1,56 @@
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="{{ page.base_url }}dist/js/bootstrap.js"></script>
 
-<script src="http://platform.twitter.com/widgets.js"></script>
-<script src="{{ page.base_url }}docs-assets/js/holder.js"></script>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/jquery-ui-1.9.1.custom.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+  <script src="js/jquery.tocify.min.js"></script>
+  <script src="js/prettify.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script>
+        $(function() {
 
-<script src="{{ page.base_url }}docs-assets/js/application.js"></script>
+            var toc = $("#toc").tocify({ selectors: "h2, h3, h4", extendPage: false, highlightOffset:70 }).data("toc-tocify");
+            prettyPrint();
+            $(".optionName").popover({ trigger: "hover" });
 
-{% if page.slug == "customize" %}
-<script src="{{ page.base_url }}docs-assets/js/less.js"></script>
-<script src="{{ page.base_url }}docs-assets/js/jszip.js"></script>
-<script src="{{ page.base_url }}docs-assets/js/uglify.js"></script>
-<script src="{{ page.base_url }}docs-assets/js/filesaver.js"></script>
-<script src="{{ page.base_url }}docs-assets/js/raw-files.js"></script>
-<script src="{{ page.base_url }}docs-assets/js/customizer.js"></script>
-{% endif %}
+        });
+		
+		
+		
+    // back to top
+    setTimeout(function () {
+      var $sideBar = $('#sidebar')
 
+      $sideBar.affix({
+        offset: {
+          top: function () {
+            var offsetTop      = $sideBar.offset().top
+            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
+            var navOuterHeight = $('.navbar-wrapper').height()
+
+            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
+          }
+        , bottom: function () {
+            return (this.bottom = $('footer').outerHeight(true))
+          }
+        }
+      })
+    }, 100)
+
+    setTimeout(function () {
+      $('.bs-top').affix()
+    }, 100)
+	
+	$('#main').waypoint(function(direction) {
+	  if(direction == 'down') {
+		  $('#navbar').fadeOut(0).removeClass('navbar-static-top').addClass('navbar-fixed-top').fadeIn("slow");
+		  $('body').addClass('topnav');
+	  }
+	  else if(direction == 'up') {
+		  $('#navbar').fadeOut("fast", function(){ $(this).removeClass('navbar-fixed-top').addClass('navbar-static-top').fadeIn(0) });
+		  $('body').removeClass('topnav');
+	  }
+	});
+    </script>
