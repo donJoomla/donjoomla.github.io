@@ -38,19 +38,13 @@
         }
       })
     }, 100)
-
-    setTimeout(function () {
-      $('.bs-top').affix()
-    }, 100)
 	
 	$('#main').waypoint(function(direction) {
 	  if(direction == 'down') {
 		  $('#navbar').fadeOut(0).removeClass('navbar-static-top').addClass('navbar-fixed-top').fadeIn("slow");
-		  $('body').addClass('topnav');
 	  }
 	  else if(direction == 'up') {
 		  $('#navbar').fadeOut("fast", function(){ $(this).removeClass('navbar-fixed-top').addClass('navbar-static-top').fadeIn(0) });
-		  $('body').removeClass('topnav');
 	  }
 	});
     </script>
