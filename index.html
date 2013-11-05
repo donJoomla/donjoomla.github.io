@@ -1,61 +1,9 @@
 ---
 layout: default
-title: JForms Module
-slug: jforms-module
-lead: "Powerful AJAX forms for Joomla."
+title: donJoomla
+slug: home
+lead: "Free, open-source Joomla! Extensions"
 base_url: "../"
-type: extension
-version: "1.6.1"
-demo: "../"
-docs: "../"
-download: "../"
 ---
 
 Install the module in Joomla, then open it in the module manager. Publish it to the position and pages you require, then click the options tabs where you will see following settings:
-
-### Basic Options
-
-**Form**  
-Select a form XML to use for your module. To use your own forms upload them to `/modules/mod_jforms/forms/`.
-
-**Introduction text**  
-Enter text to display above the form
-
-**Thank you message**  
-Enter a message which will be displayed after successful form submission.
-
-**Submit button text**  
-Enter the text you would like to appear on the submit button.
-
-### Email Settings
-
-Set up and customise the email sent by jForms.  
-
-**Send email**  
-Choose whether to send the form data via email. If you select no all following settings will be ignored.
-
-**Email destination**  
-Enter a valid email address where the form data will be sent to.  
-Whilst you could have the **destination email** static eg. `you@example.com` it can also be dynamic to be sent to a user entered value.  
-If for example you want to send the email to the user and you have an email form field you could enter `{email}`.
-
-**Email subject**  
-Enter a subject for the email that will be sent.
-The same goes for the **email subject** as for the email destination so it could be static eg. `Website Enquiry`, or use form data eg. `{subject}`.
-
-**Email text**  
-This is where you create the template of the email. It supports HTML and just like the destination & subject you can use placeholders for the form data for example `{email}`. 
-To display all the form data in a list use `{fields}`.  
-If for example your form fields were name, email, subject & message you could format your email in the following way:
-
-    <p>You have just received a new message from <strong>{name}</strong> - {email} regarding {subject}</p>
-    <p>{message}</p>
-
-### AJAX Settings
-
-**Use Ajax to send form**  
-Select this option to submit the form without reloading the page.
-
-**Custom Functions**  
-Execute custom JavaScript functions. To use your own functions upload them to `/modules/mod_jforms/functions/`.
-
