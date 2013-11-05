@@ -2,7 +2,7 @@
 
 // tocify
 $(function() {
-	var toc = $("#toc").tocify({ selectors: "h2, h3", scrollTo:70, highlightOffset:70 }).data("toc-tocify");
+	var toc = $("#toc").tocify({ selectors: "h2, h3", scrollTo:50, highlightOffset:50 }).data("toc-tocify");
 	prettyPrint();
 	$(".optionName").popover({ trigger: "hover" });
 });
