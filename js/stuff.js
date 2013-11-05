@@ -24,11 +24,11 @@ $('#main').waypoint(function(direction) {
 // sticky footer
 $('#base').waypoint(function(direction) {
 	if(direction == 'down') {
-		$('footer').addClass('affix');
 		$(this).addClass('buffer');
+		$('footer').addClass('affix');
 	}
 	else if(direction == 'up') {
-		$('footer').removeClass('affix');
 		$(this).removeClass('buffer');
+		$('footer').removeClass('affix');
 	}
 }, { offset: 'bottom-in-view' });
