@@ -27,4 +27,12 @@
 		  $('#sidebar').removeClass('affix');
 	  }
 	});
+	$('#base').waypoint(function(direction) {
+	  if(direction == 'down') {
+		  $('#footer').addClass('affix');
+	  }
+	  else if(direction == 'up') {
+		  $('#footer').removeClass('affix');
+	  }
+	});
     </script>
