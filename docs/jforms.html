@@ -78,8 +78,9 @@ download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jform
 <h2 class="page-header">Creating custom forms</h2>
 <p>The module builds forms from XML using Joomla's inbuilt JForm class. 
   Here is an example of a form XML file.</p>
+<pre class="well"><code>
 {% highlight xml %}
-<pre class="well"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;  
+&lt;?xml version="1.0" encoding="utf-8"?&gt;  
 &lt;form&gt;  
     &lt;fields&gt;  
         &lt;fieldset addfieldpath="/modules/mod_jforms/elements"&gt;  
@@ -90,8 +91,8 @@ download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jform
         &lt;/fieldset&gt;  
    &lt;/fields&gt;  
 &lt;/form&gt;
-</code></pre>
 {% endhighlight %}
+</code></pre>
 <p>This would output a form with fields for name, email &amp; message.</p>
 <p>To add extra form fields simply add them within the fieldset tags following the same format.<br>
   For a list of all the available field types visit <a href="http://docs.joomla.org/Standard_form_field_types">http://docs.joomla.org/Standard_form_field_types</a></p>
