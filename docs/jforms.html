@@ -8,6 +8,7 @@ type: extension
 version: "1.6.1"
 download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jforms_full_v1.6.1_j2.5_j3.1.zip"
 ---
+
 <p class="lead">donJoomla jForms Module is a small but powerful extension which builds AJAX forms from XML using Joomla's inbuilt JForm class. It can be used as a simple AJAX contact form, but it is so much more!</p>
 <p class="lead">It is easily extensible with plugins to manipulate or send the data anywhere you want so it could also be used as a sign-up form, questionnaire or any form of data collection you can imagine.</p>
 <h2 class="page-header"> Installation &amp; configuration</h2>
@@ -41,6 +42,26 @@ download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jform
   Select this option to submit the form without reloading the page.</p>
 <p><strong>Custom Functions</strong><br>
   Execute custom JavaScript functions. To use your own functions upload them to /modules/mod_jforms/functions/.</p>
+<h2 class="page-header">Using jForms plugins</h2>
+<h3>Google Spreadsheets Plugin</h3>
+<pre><code>**Important!** jForms Plugin Framework (plg_system_jforms) needs to be installed &amp; published to use Google Spreadsheets.
+</code></pre>
+<p>Install the Google Spreadsheets plugin in Joomla, then configure &amp; publish it in your plugin manager. 
+  You will need to enter your Google username and password.</p>
+<blockquote>
+  <h3> <a name="important-information-for-gmail-users" class="anchor" href="#important-information-for-gmail-users"><span class="octicon octicon-link"></span></a>Important information for GMail Users</h3>
+  <p>If you are using GMail (rather than Google Apps) you will get blocked on the first call of the API. 
+    To fix this, open a jForms module in your module manager after setting up the plugin. You will see an error. 
+    Now head over to [gmail.com] and sign in, you should see a notification about access to your account. 
+    Authorise access and you're good to go ;)</p>
+</blockquote>
+<p>Open the jForms module which you wish to use in your module manager, click on the options tab and scroll to the bottom. 
+  You will see a new set of options called "Google Spreadsheets" with the following options:</p>
+<p><strong>Save to spreadsheet</strong><br>
+  Choose whether to send the form data to a Google Spreasheet. If you select no all following settings will be ignored.</p>
+<p><strong>Select spreadsheet</strong><br>
+  Select which spreadsheet to save to form data to.</p>
+<p>Note: It's best to use a blank sheet as all the row headers etc. will be created automatically.</p>
 <h2 class="page-header">Creating custom forms</h2>
 <p>The module builds forms from XML using Joomla's inbuilt JForm class. 
   Here is an example of a form XML file.</p>
