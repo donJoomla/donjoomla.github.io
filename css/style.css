@@ -228,3 +228,6 @@ footer {
 .nav-list > li > a {
     padding: 5px;
 }
+#base {
+	margin-bottom:-1px;
+}
