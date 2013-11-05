@@ -20,8 +20,8 @@
       <div class="item active">
         <div class="container">
           <div class="carousel-caption">
+            {% if page.type == "extension" %}
             <div class="pull-right text-right">
-              {% if page.type == "extension" %}
 			  <p>Latest release: <span class="label label-success">v{{ page.version }}</span><br>
                 Compatible with: <img src="http://docs.joomla.org/images/5/53/Compat_icon_2_5.png" alt=""> <img src="http://docs.joomla.org/images/d/d6/Compat_icon_3_1.png" alt=""></p>
               <a class="btn btn-lg btn-success" href="{{ page.download }}" role="button"><span class="glyphicon glyphicon-save"></span> Download now</a> </div>
