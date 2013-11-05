@@ -30,7 +30,9 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+	color: #ccc;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
