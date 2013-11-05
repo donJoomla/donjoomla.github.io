@@ -29,9 +29,11 @@
 	$('#base').waypoint(function(direction) {
 	  if(direction == 'down') {
 		  $('footer').addClass('affix');
+		  $('base').height('201');
 	  }
 	  else if(direction == 'up') {
 		  $('footer').removeClass('affix');
+		  $('base').height('0');
 	  }
 	}, { offset: 'bottom-in-view' });
     </script>
