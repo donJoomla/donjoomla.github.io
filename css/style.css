@@ -111,7 +111,7 @@ background-color: #0088cc;
 #sidebar.affix {
   position: static;
 }
-#footer.affix {
+footer.affix {
   position: static;
 }
 
@@ -129,7 +129,7 @@ background-color: #0088cc;
     position: fixed; /* Undo the static from mobile first approach */
     top: 70px;
   }
-  #footer.affix {
+  footer.affix {
     position: fixed; /* Undo the static from mobile first approach */
     top: 70px;
   }
