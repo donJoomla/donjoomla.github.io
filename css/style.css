@@ -3,7 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  color: #5a5a5a;
+	color: #5a5a5a;
 }
 a {
 	color:#006799;
@@ -39,8 +39,8 @@ a {
 
 /* Carousel base class */
 .carousel {
-  height: 250px;
-  margin-bottom: 20px;
+	height: 250px;
+	margin-bottom: 20px;
 	background: -webkit-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
 	background: -o-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
 	background: -ms-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
@@ -49,22 +49,22 @@ a {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
-  position:static;
-  text-align:left;
-  padding-top:100px;
+  	z-index: 10;
+  	position:static;
+  	text-align:left;
+  	padding-top:100px;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 250px;
+  	height: 250px;
 }
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	min-width: 100%;
+  	height: 500px;
 }
 
 
@@ -103,9 +103,9 @@ a {
 }
 
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
-color: #ffffff;
-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-background-color: #006799;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #006799;
 }
 
 /*
@@ -117,10 +117,10 @@ background-color: #006799;
 
 /* By default it's not affixed in mobile views, so undo that */
 #sidebar.affix {
-  position: static;
+  	position: static;
 }
 footer.affix {
-  position: static;
+  	position: static;
 }
 
 /* Show and affix the side nav when space allows it */
@@ -139,7 +139,7 @@ footer.affix {
   }
   footer.affix {
     position: fixed; /* Undo the static from mobile first approach */
-    top: 70px;
+    bottom: 0;
   }
   #sidebar.affix-bottom {
     position: absolute; /* Undo the static from mobile first approach */
