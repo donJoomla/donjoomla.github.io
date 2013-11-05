@@ -25,10 +25,10 @@ $('#main').waypoint(function(direction) {
 $('#base').waypoint(function(direction) {
 	if(direction == 'down') {
 		$('footer').addClass('affix');
-		$('#base').addClass('buffer');
+		$(this).addClass('buffer');
 	}
 	else if(direction == 'up') {
 		$('footer').removeClass('affix');
-		$('#base').removeClass('buffer');
+		$(this).removeClass('buffer');
 	}
 }, { offset: 'bottom-in-view' });
