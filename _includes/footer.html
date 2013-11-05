@@ -27,10 +27,10 @@
 	  }
 	});
 	$('#base').waypoint(function(direction) {
-	  if(direction == 'up') {
+	  if(direction == 'down') {
 		  $('footer').addClass('affix');
 	  }
-	  else if(direction == 'down') {
+	  else if(direction == 'up') {
 		  $('footer').removeClass('affix');
 	  }
 	}, { offset: 'bottom-in-view' });
