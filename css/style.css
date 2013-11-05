@@ -39,11 +39,11 @@ a {
 .carousel {
   height: 250px;
   margin-bottom: 20px;
-  background: -webkit-linear-gradient(bottom, rgb(0, 43, 64) 0%, rgb(0, 103, 153) 100%);
-	background: -o-linear-gradient(bottom, rgb(0, 43, 64) 0%, rgb(0, 103, 153) 100%);
-	background: -ms-linear-gradient(bottom, rgb(0, 43, 64) 0%, rgb(0, 103, 153) 100%);
-	background: -moz-linear-gradient(bottom, rgb(0, 43, 64) 0%, rgb(0, 103, 153) 100%);
-	background: linear-gradient(to top, rgb(0, 43, 64) 0%, rgb(0, 103, 153) 100%);
+	background: -webkit-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
+	background: -o-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
+	background: -ms-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
+	background: -moz-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
+	background: linear-gradient(to top, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
