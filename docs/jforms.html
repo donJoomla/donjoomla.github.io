@@ -35,7 +35,7 @@ download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jform
 <p><strong>Email text</strong><br>
   This is where you create the template of the email. It supports HTML and just like the destination &amp; subject you can use placeholders for the form data for example <code>{email}</code>. To display all the form data in a list use <code>{fields}</code>.<br>
   If for example your form fields were name, email, subject &amp; message you could format your email in the following way:</p>
-<pre><code>&lt;p&gt;You have just received a new message from &lt;strong&gt;{name}&lt;/strong&gt; - {email} regarding {subject}&lt;/p&gt;
+<pre class="well prettyprint"><code>&lt;p&gt;You have just received a new message from &lt;strong&gt;{name}&lt;/strong&gt; - {email} regarding {subject}&lt;/p&gt;
 &lt;p&gt;{message}&lt;/p&gt;  </code></pre>
 <h3>AJAX Settings</h3>
 <p><strong>Use Ajax to send form</strong><br>
@@ -78,7 +78,7 @@ download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jform
 <h2 class="page-header">Creating custom forms</h2>
 <p>The module builds forms from XML using Joomla's inbuilt JForm class. 
   Here is an example of a form XML file.</p>
-<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;  
+<pre class="well prettyprint"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;  
 &lt;form&gt;  
     &lt;fields&gt;  
         &lt;fieldset addfieldpath="/modules/mod_jforms/elements"&gt;  
