@@ -5,13 +5,24 @@ slug: home
 lead: "Free, open-source Joomla! Extensions"
 base_url: "../"
 ---
-
-Install the module in Joomla, then open it in the module manager. Publish it to the position and pages you require, then click the options tabs where you will see following settings:
-
-<ul>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-3"><a><img src="{{ site.url }}images/jforms_googlespreadsheets.jpg" alt="" width="125" height="125"></a>
+    <h3 class="media-heading">Google Spreadsheet Export</h3>
+    Save submitted data to a Google Spreadsheet.<br>
+    <a href="{{ site.url }}docs/jforms#GoogleSpreadsheetsPlugin">Google Spreadsheets Instructions</a>
+    </p>
+    <a class="btn btn-success" href=""><span class="glyphicon glyphicon-save"></span> Download Google Spreadsheets Plugin</a></div>
+  <div class="col-md-3"><a><img src="{{ site.url }}images/jforms_ymlp.png" alt="" width="125" height="125"></a>
+    <h3 class="media-heading">Your Mailing List Provider</h3>
+    Subscribe user to a YMLP mailing list.<br>
+    <a href="{{ site.url }}docs/jforms#YMLPPluginInstructions">YMLP Instructions</a>
+    </p>
+    <a class="btn btn-success" href=""><span class="glyphicon glyphicon-save"></span> Download YMLP Plugin</a></div>
+  <div class="col-md-3"></div>
+</div>
+<ul class="hidden">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+  <li> <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
