@@ -138,8 +138,9 @@ footer.affix {
     top: 70px;
   }
   footer.affix {
-    position: fixed; /* Undo the static from mobile first approach */
-    bottom: 0;
+  	position: fixed; /* Undo the static from mobile first approach */
+    	bottom: 0;
+    	width:100%;
   }
   #sidebar.affix-bottom {
     position: absolute; /* Undo the static from mobile first approach */
