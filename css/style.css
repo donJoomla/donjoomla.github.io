@@ -230,4 +230,6 @@ footer {
 }
 #base {
 	margin:1px 0 -1px;
+	height:1px;
+	width:100%;
 }
