@@ -156,7 +156,7 @@ footer {
  * Author: @gregfranko
  */
 .tocify {
-    max-height: 90%;
+    max-height: 80%;
     overflow: auto;
     border: 1px solid #e9e9e9;
     webkit-border-radius: 6px;
