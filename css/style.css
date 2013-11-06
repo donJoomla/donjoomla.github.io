@@ -184,7 +184,7 @@ footer {
 .tocify-subheader {
     display: none;
 }
-.tocify-subheader a {
+.tocify-subheader>li>a {
     padding-left: 25px;
 }
 
@@ -194,23 +194,13 @@ footer {
 }
 
 /* Further indents second level subheader elements. */
-.tocify-subheader .tocify-subheader a {
+.tocify-subheader .tocify-subheader>li>a {
     padding-left: 30px;
 }
 
 /* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
 .tocify-subheader .tocify-subheader .tocify-subheader a {
     padding-left: 40px;
-}
-
-/* Twitter Bootstrap Override Style */
-.nav-list > li > a, .nav-list .nav-header {
-    margin: 0px;
-}
-
-/* Twitter Bootstrap Override Style */
-.nav-list > li > a {
-    padding: 5px;
 }
 #base {
 	margin:1px 0 -1px;
