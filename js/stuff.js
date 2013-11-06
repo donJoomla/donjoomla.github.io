@@ -7,13 +7,6 @@ if($(".toc").length>0) {
 		$(".optionName").popover({ trigger: "hover" });
 	});
 }
-// resize iframes
-$(document).ready(function(e) {
-    if($(".demoFrame").length>0) {
-		$(".demoFrame").iframeHeight();
-	}
-});
-
 // sticky header	
 $('#main').waypoint(function(direction) {
 	if(direction == 'down') {
