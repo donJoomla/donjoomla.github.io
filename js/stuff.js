@@ -1,4 +1,9 @@
 // stuff for the things...
+if($(".demoFrame").length>0) {
+	$(".demoFrame").each(function(index, element) {
+        $(element).iframeHeight();
+    });
+}
 
 // tocify
 if($(".toc").length>0) {
