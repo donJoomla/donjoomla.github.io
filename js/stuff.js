@@ -7,6 +7,15 @@ if($(".toc").length>0) {
 		$(".optionName").popover({ trigger: "hover" });
 	});
 }
+// resize iframes
+function sizeDemoFrame () {
+	$(".demoFrame").each(function() {
+		$(this).height($(this).find("body").height());
+	});
+}
+if($(".demoFrame").length>0) {
+	sizeDemoFrame();
+}
 // sticky header	
 $('#main').waypoint(function(direction) {
 	if(direction == 'down') {
