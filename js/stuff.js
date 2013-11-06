@@ -1,9 +1,11 @@
 // stuff for the things...
 if($(".demoFrame").length>0) {
-	//$(".demoFrame").each(function(index, element) {
-       // $(element).iframeHeight();
-    //});
-       $(".demoFrame").iframeHeight();
+	$(".demoFrame").iframeHeight();
+	/*
+	$(".demoFrame").each(function(index, element) {
+		$(element).iframeHeight();
+	});
+	*/
 }
 
 // tocify
