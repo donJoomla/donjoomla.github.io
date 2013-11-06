@@ -9,6 +9,7 @@ sitemap:
     changefreq: monthly
     lastmod: 2013-06-11T07:07:00
 ---
+![me]({{ site.url }}/images/me.jpg "Me")
 > Hi, I'm Adam Bouqdib, a front-end developer and Joomla! geek.
 > 
 > I'm an all-rounder when it comes to web development with well over a decade of experience in PHP &amp; MySQL, JavaScript, HTML &amp; CSS and graphic design.  
