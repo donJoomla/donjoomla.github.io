@@ -11,7 +11,7 @@ download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jform
 <h1>Documentation</h1>
 <h2 class="page-header">Download JForms</h2>
 <p class="lead">If you're planning to use jForms plugins download the full package. If however you plan to use it only as a contact form, download download the <code>module only</code> version.</p>
-<a class="btn btn-success btn-lg" href="{{ page.download }}"><span class="glyphicon glyphicon-save"></span> Download Full Package <span class="label label-info">v{{ page.version }}</span></a> <a class="btn btn-success btn-lg" href="https://github.com/donJoomla/jforms/releases/download/1.6.1/mod_jforms_v1.6.1.zip"><span class="glyphicon glyphicon-save"></span> Download Module Only <span class="label label-info">v{{ page.version }}</span></a> 
+<a class="btn btn-success btn-lg" href="https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jforms_full_v1.6.1_j2.5_j3.1.zip"><span class="glyphicon glyphicon-save"></span> Download Full Package <span class="label label-info">v1.6.1</span></a> <a class="btn btn-success btn-lg" href="https://github.com/donJoomla/jforms/releases/download/1.6.1/mod_jforms_v1.6.1.zip"><span class="glyphicon glyphicon-save"></span> Download Module Only <span class="label label-info">v1.6.1</span></a> 
 <h2 class="page-header"> Installation &amp; configuration</h2>
 <p>Install the module in Joomla, then open it in the module manager. Publish it to the position and pages you require, then click the options tabs where you will see following settings:</p>
 <h3>Basic Options</h3>
@@ -36,7 +36,7 @@ download: "https://github.com/donJoomla/jforms/releases/download/1.6.1/pkg_jform
 <p><strong>Email text</strong><br>
   This is where you create the template of the email. It supports HTML and just like the destination &amp; subject you can use placeholders for the form data for example <code>{email}</code>. To display all the form data in a list use <code>{fields}</code>.<br>
   If for example your form fields were name, email, subject &amp; message you could format your email in the following way:</p>
-{% highlight HTML %}
+{% highlight html %}
 <p>You have just received a new message from <strong>{name}</strong> - {email} regarding {subject}</p>
 <p>{message}</p>
 {% endhighlight %}
