@@ -11,6 +11,7 @@ if($(".toc").length>0) {
 function sizeDemoFrame () {
 	$(".demoFrame").each(function() {
 		$(this).height($(this).find("html").height());
+		alert('pop');
 	});
 }
 $(document).ready(function(e) {
