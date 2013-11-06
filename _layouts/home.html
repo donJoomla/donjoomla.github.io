@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
     {% include header.html %}
   </head>
-<!-- NAVBAR
-================================================== -->
+  
   <body>
-    <a class="sr-only" href="#content">Skip to main content</a>
-
-    <!-- Docs master nav -->
-    {% include nav-main.html %}
-  
-  
-  <!-- Carousel
-    ================================================== -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <a class="sr-only" href="#content">Skip to main content</a> 
+  {% include nav-main.html %}
+  <div class="carousel slide">
     <div class="carousel-inner">
       <div class="item active">
         <div class="container">
@@ -27,14 +19,7 @@
       </div>
     </div>
   </div>
-  <!-- /.carousel -->
-  
-  <div class="container" id="main" role="main">
-    {{ content }}
-  </div>
-  <!-- /.container -->  
-  <!-- FOOTER -->
-    {% include footer.html %}
-
+  <div class="container" id="main" role="main"> {{ content }} </div>
+  {% include footer.html %}
   </body>
 </html>

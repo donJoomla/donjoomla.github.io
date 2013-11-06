@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
     {% include header.html %}
   </head>
-<!-- NAVBAR
-================================================== -->
   <body>
-    <a class="sr-only" href="#content">Skip to main content</a>
-
-    <!-- Docs master nav -->
-    {% include nav-main.html %}
-  
-  
-  <!-- Carousel
-    ================================================== -->
+  <a class="sr-only" href="#content">Skip to main content</a> 
+  {% include nav-main.html %}
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="item active">
         <div class="container">
-          <div class="carousel-caption">
+          <div class="carousel-caption"> 
             {% if page.type == "extension" %}
             <div class="pull-right text-right">
-			  <p>Latest release: <span class="label label-success">v{{ page.version }}</span><br>
-                Compatible with: <img src="http://docs.joomla.org/images/5/53/Compat_icon_2_5.png" alt=""> <img src="http://docs.joomla.org/images/d/d6/Compat_icon_3_1.png" alt=""></p>
-              <a class="btn btn-lg btn-success" href="{{ page.download }}" role="button"><span class="glyphicon glyphicon-save"></span> Download now</a> </div>
-              {% endif %}
+              <p>Latest release: <span class="label label-success">v{{ page.version }}</span><br>
+                Compatible with: 
+                <img src="http://docs.joomla.org/images/5/53/Compat_icon_2_5.png" alt=""> 
+                <img src="http://docs.joomla.org/images/d/d6/Compat_icon_3_1.png" alt=""></p>
+              <a class="btn btn-lg btn-success" href="{{ page.download }}" role="button">
+                <span class="glyphicon glyphicon-save"></span> Download now</a></div>
+            {% endif %}
             <h1>{{ page.title }}</h1>
             <p>{{ page.lead }}</p>
           </div>
@@ -33,20 +27,16 @@
       </div>
     </div>
   </div>
-  <!-- /.carousel -->
-  
   <div class="container" id="main">
     <div class="row">
       <div class="col-md-3">
-        <div id="sidebar"><div id="toc"></div></div>
+        <div id="sidebar">
+          <div id="toc"></div>
+        </div>
       </div>
-      <div class="col-md-9" role="main">
-        {{ content }}
-      </div>
+      <div class="col-md-9" role="main"> {{ content }} </div>
     </div>
   </div>
-  <!-- /.container -->  
-  <!-- FOOTER -->
-    {% include footer.html %}
+  {% include footer.html %}
   </body>
 </html>
