@@ -1,5 +1,12 @@
-GNU GENERAL PUBLIC LICENSE
-                       Version 2, June 1991
+---
+layout: default
+title: GNU GENERAL PUBLIC LICENSE
+slug: license
+lead: ""
+base_url: "../"
+---
+# GNU GENERAL PUBLIC LICENSE
+Version 2, June 1991
 
  Copyright (C) 1989, 1991 Free Software Foundation, Inc., <http://fsf.org/>
  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
