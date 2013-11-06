@@ -10,7 +10,9 @@ if($(".toc").length>0) {
 // resize iframes
 $(document).ready(function(e) {
     if($(".demoFrame").length>0) {
-		$(".demoFrame").iframeHeight();
+		$(".demoFrame").each(function(index, element) {
+            $(element).iframeHeight();
+        });
 	}
 });
 
