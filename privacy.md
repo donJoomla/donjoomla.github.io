@@ -19,7 +19,7 @@ We may collect the following information:
 - demographic information such as postcode, preferences and interests
 - other information relevant to customer surveys and/or offers
 
-## What we do with the gathered data
+## What we do it
 
 We require this information to understand your needs and provide you with a better service, and in particular for the following reasons:
 
@@ -47,7 +47,7 @@ You can choose to accept or decline cookies. Most web browsers automatically acc
 
 Our website may contain links to enable you to visit other websites of interest easily. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.
 
-## Controlling your personal information
+## Controlling your data
 
 You may choose to restrict the collection or use of your personal information in the following ways:
 
