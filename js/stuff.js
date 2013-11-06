@@ -1,11 +1,12 @@
 // stuff for the things...
 
 // tocify
-$(function() {
-	var toc = $("#toc").tocify({ selectors: "h2, h3", scrollTo:50, highlightOffset:50 }).data("toc-tocify");
-	$(".optionName").popover({ trigger: "hover" });
-});
-
+if($("#toc").length()>0) {
+	$(function() {
+		var toc = $("#toc").tocify({ selectors: "h2, h3", scrollTo:50, highlightOffset:50 }).data("toc-tocify");
+		$(".optionName").popover({ trigger: "hover" });
+	});
+}
 // sticky header	
 $('#main').waypoint(function(direction) {
 	if(direction == 'down') {
