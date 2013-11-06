@@ -32,3 +32,11 @@ $('#base').waypoint(function(direction) {
 		$('footer').removeClass('affix');
 	}
 }, { offset: 'bottom-in-view' });
+
+ // resize iframes
+ $(document).ready(function(e) {
+     if($(".demoFrame").length>0) {
+		$(".demoFrame").iframeHeight();
+ 	}
+ });
+
