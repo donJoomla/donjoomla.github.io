@@ -11,7 +11,7 @@ if($(".toc").length>0) {
 $(document).ready(function(e) {
     if($(".demoFrame").length>0) {
 		$(".demoFrame").each(function(index, element) {
-            $(element).iframeHeightExternal();
+            $(element).iframeHeight();
         });
 	}
 });
