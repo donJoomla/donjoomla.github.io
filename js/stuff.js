@@ -8,15 +8,9 @@ if($(".toc").length>0) {
 	});
 }
 // resize iframes
-function sizeDemoFrame () {
-	$(".demoFrame").each(function() {
-		$(this).height($(this).find("html").height());
-		alert('pop');
-	});
-}
 $(document).ready(function(e) {
     if($(".demoFrame").length>0) {
-		sizeDemoFrame();
+		$(".demoFrame").iframeHeight();
 	}
 });
 
