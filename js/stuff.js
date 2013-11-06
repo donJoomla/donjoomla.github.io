@@ -1,12 +1,4 @@
 // stuff for the things...
-if($(".demoFrame").length>0) {
-	$(".demoFrame").iframeHeight();
-	/*
-	$(".demoFrame").each(function(index, element) {
-		$(element).iframeHeight();
-	});
-	*/
-}
 
 // tocify
 if($(".toc").length>0) {
@@ -15,6 +7,7 @@ if($(".toc").length>0) {
 		$(".optionName").popover({ trigger: "hover" });
 	});
 }
+
 // sticky header	
 $('#main').waypoint(function(direction) {
 	if(direction == 'down') {
@@ -41,3 +34,12 @@ $('#base').waypoint(function(direction) {
 	}
 }, { offset: 'bottom-in-view' });
 
+// iframe auto-height
+if($(".demoFrame").length>0) {
+	$(".demoFrame").iframeHeight();
+	
+	/* should it be like this? I don't know...
+	$(".demoFrame").each(function(index, element) {
+		$(element).iframeHeight();
+	}); */
+}
