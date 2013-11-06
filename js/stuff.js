@@ -11,7 +11,9 @@ if($(".toc").length>0) {
 $(document).ready(function(e) {
     if($(".demoFrame").length>0) {
 		$(".demoFrame").each(function(index, element) {
-            $(element).iframeHeight();
+            $(element).iframeHeight({
+				blockCrossDomain     : false
+			});
         });
 	}
 });
