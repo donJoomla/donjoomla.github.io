@@ -91,11 +91,6 @@ a {
   }
 }
 
-.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
-	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-	background-color: #006799;
-}
 
 #sidebar.affix {
   	position: static;
@@ -164,9 +159,6 @@ footer {
     border-radius: 6px;
 	background:#f6f6f6;
 }
-.tocify-header a {
-    padding-left: 15px;
-}
 .tocify-subheader {
     display: none;
 }
@@ -179,6 +171,11 @@ footer {
 .tocify-subheader .tocify-subheader>li>a {
     padding-left: 30px;
 }
-.tocify-subheader .tocify-subheader .tocify-subheader a {
+.tocify-subheader .tocify-subheader .tocify-subheader>li>a {
     padding-left: 40px;
+}
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #006799;
 }
