@@ -8,6 +8,17 @@ body {
 a {
 	color:#006799;
 }
+
+
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+.navbar-brand {
+	font-family: 'Share Tech Mono', sans-serif;
+}
+.navbar-brand  img {
+	margin: -13px 5px -7px 0px;
+}
+
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 .navbar-wrapper {
