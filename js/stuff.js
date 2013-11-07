@@ -36,8 +36,12 @@ $('#base').waypoint(function(direction) {
 
 // iframe auto-height
 if($(".demoFrame").length>0) {
-	try{$(".demoFrame").iframeHeight();}
-	catch{}
+	try {
+		$(".demoFrame").iframeHeight();
+	}
+	catch {
+		return;
+	}
 	
 	/* should it be like this? I don't know...
 	$(".demoFrame").each(function(index, element) {
