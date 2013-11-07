@@ -39,7 +39,7 @@ if($(".demoFrame").length>0) {
 	try {
 		$(".demoFrame").iframeHeight();
 	}
-	catch {
+	catch(e) {
 		return;
 	}
 	
