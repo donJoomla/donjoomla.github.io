@@ -14,9 +14,11 @@ a {
 /* logo */
 .navbar-brand {
 	font-family: 'Share Tech Mono', sans-serif;
+	height: 20px;
+	line-height: 22px;
 }
 .navbar-brand  img {
-	margin: -13px 5px -7px 0px;
+	margin: -13px 0 -7px;
 }
 .navbar-wrapper {
   position: absolute;
