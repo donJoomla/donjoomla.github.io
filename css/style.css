@@ -11,16 +11,6 @@ a {
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-/* logo */
-.navbar-brand {
-	font-family: 'Share Tech Mono', sans-serif;
-	font-size: 20px;
-	height: 20px;
-	line-height: 22px;
-}
-.navbar-brand  img {
-	margin: -13px 0 -7px;
-}
 .navbar-wrapper {
   position: absolute;
   top: 0;
@@ -37,8 +27,20 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
+.navbar-brand  img {
+	margin: -13px 0 -7px;
+}
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+	font-size: 18px;
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+	font-family: 'Share Tech Mono', sans-serif;
 	color: #ccc;
+	height: 50px;
+	line-height: 22px;
+}
+.navbar-brand {
+	font-size: 20px;
 }
 
 /* CUSTOMIZE THE CAROUSEL
