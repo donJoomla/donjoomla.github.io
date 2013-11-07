@@ -140,14 +140,6 @@ footer {
 	text-align: center;
 	border-top: 1px solid #e5e5e5;
 }
-#base {
-	margin:1px 0 -1px;
-	height:1px;
-	width:100%;
-}
-#base.buffer {
-	margin-top:202px;
-}
 
 /*
  * jquery.tocify.css 1.9.0
