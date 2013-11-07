@@ -33,14 +33,14 @@ a {
 	height: 50px;
 	line-height: 22px;
 }
+.navbar-inverse .navbar-nav>li>a {
+	font-size: 18px;
+}
 .navbar-inverse .navbar-brand  {
-	font-size: 20px;
+	font-size: 24px;
 }
 .navbar-brand  img {
 	margin: -13px 0 -7px;
-}
-.navbar-inverse .navbar-nav>li>a {
-	font-size: 18px;
 }
 
 /* CUSTOMIZE THE CAROUSEL
