@@ -25,11 +25,11 @@ $('#main').waypoint(function(direction) {
 // sticky footer
 $('#base').waypoint(function(direction) {
 	if(direction == 'down') {
-		$('#base').addClass('buffer');
+		$('#base').css('margin-top', $('footer').height() + 101 + 'px');
 		$('footer').addClass('affix');
 	}
 	else if(direction == 'up') {
-		$('#base').removeClass('buffer');
+		$('#base').css('margin-top', '1px');
 		$('footer').removeClass('affix');
 	}
 }, { offset: 'bottom-in-view' });
