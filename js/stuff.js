@@ -25,7 +25,7 @@ $('#main').waypoint(function(direction) {
 // sticky footer
 $('#base').waypoint(function(direction) {
 	if(direction == 'down') {
-		$('#base').css('margin-top', ($('footer').height() + 101) + 'px');
+		$('#base').css('margin-top', $('footer').outerHeight() + 'px');
 		$('footer').addClass('affix');
 	}
 	else if(direction == 'up') {
@@ -36,7 +36,8 @@ $('#base').waypoint(function(direction) {
 
 // iframe auto-height
 if($(".demoFrame").length>0) {
-	$(".demoFrame").iframeHeight();
+	try{$(".demoFrame").iframeHeight();}
+	catch{}
 	
 	/* should it be like this? I don't know...
 	$(".demoFrame").each(function(index, element) {
