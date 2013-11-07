@@ -25,7 +25,7 @@ $('#main').waypoint(function(direction) {
 // sticky footer
 $('#base').waypoint(function(direction) {
 	if(direction == 'down') {
-		$('#base').css('margin-top', $('footer').outerHeight() + 'px');
+		$('#base').css('margin-top', $('footer').outerHeight() + 100 + 'px');
 		$('footer').addClass('affix');
 	}
 	else if(direction == 'up') {
