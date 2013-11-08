@@ -30,10 +30,9 @@ a:hover {
 .navbar-brand  img {
 	margin: -13px 0 -7px;
 }
-.navbar ul li.active a {
+.navbar .navbar-nav>li.active>a {
 	color:#f93;
 	text-shadow: #6C3806 0px 1px 0px;
-	border-top:2px solid #f93;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -177,7 +176,7 @@ footer {
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-	background-color: #FF9833;
+	background-color: #23879E;
 }
 .demoFrame {
 	width:100%;
