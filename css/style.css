@@ -7,7 +7,10 @@ body {
 	margin-top:50px;
 }
 a {
-	color:#578AD6;
+	color:#A65B11;
+}
+a:hover {
+	color:#FF9833;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -18,14 +21,19 @@ a {
 	height: 50px;
 	line-height: 22px;
 }
-.navbar-inverse .navbar-nav>li>a {
+.navbar .navbar-nav>li>a {
 	font-size: 18px;
 }
-.navbar-inverse .navbar-brand  {
+.navbar .navbar-brand  {
 	font-size: 24px;
 }
 .navbar-brand  img {
 	margin: -13px 0 -7px;
+}
+.navbar ul li.active a {
+	color:#f93;
+	text-shadow: #6C3806 0px 1px 0px;
+	border-top:2px solid #f93;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -169,7 +177,7 @@ footer {
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-	background-color: #578AD6;
+	background-color: #FF9833;
 }
 .demoFrame {
 	width:100%;
@@ -180,5 +188,5 @@ footer {
 	margin-top: -50px;
 	position: relative;
 	padding-top: 20px;
-	border-top: 5px solid #EBAD14;
+	border-top: 5px solid #FF9833;
 }
