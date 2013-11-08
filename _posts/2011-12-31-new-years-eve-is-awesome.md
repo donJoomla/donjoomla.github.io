@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Blogging Like a Hacker
+category: Tutorials
+image: http://donjoomla.com/images/logo.png
 tag: 
 - JForms Module
 ---
