@@ -1,0 +1,19 @@
+---
+layout: home
+title: Blog
+slug: blog
+sitemap:
+    priority: 0.5
+    changefreq: monthly
+    lastmod: 2013-06-11T10:12:00
+---
+  {% for post in site.posts %}
+  <div class="media box">
+    <a href="{{post.url}}"><img src="{{post.image}}"></a>
+	<div class="media-body">
+	  <h3 class="media-title">{{post.title}}</h3>
+	  <p class="summary">{{post.excerpt}}</p>
+      <time style="color:#666;font-size:11px;" datetime='{{post.date | date: "%Y-%m-%d"}}'>{{post.date | date: "%m/%d/%y"}}</time>
+    </div>
+  </div>
+  {% endfor %}
