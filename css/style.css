@@ -4,6 +4,7 @@
 
 body {
 	color: #5a5a5a;
+	background:#f9f9f9;
 	margin-top:50px;
 	font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -190,7 +191,7 @@ footer {
 	border:none;
 }
 #main {
-	background: #fff;
+	background:#f9f9f9;
 	margin-top: -50px;
 	position: relative;
 	padding-top: 20px;
