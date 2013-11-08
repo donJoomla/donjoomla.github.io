@@ -3,7 +3,7 @@
 // tocify
 if($(".toc").length>0) {
 	$(function() {
-		var toc = $("#sidebar.toc").tocify({ selectors: "h2, h3", scrollTo:50, highlightOffset:50 }).data("toc-tocify");
+		var toc = $("#sidebar.toc").tocify({ context: "#main", scrollTo:50, highlightOffset:50 }).data("toc-tocify");
 		$(".optionName").popover({ trigger: "hover" });
 	});
 }
