@@ -16,8 +16,12 @@
             <div class="pull-right text-right">
               <p>Latest release: <span class="label label-success">v{{ page.version }}</span><br>
                 Compatible with: 
-                <img src="{{ site.url }}/images/compat_25.png" alt=""> 
-                <img src="{{ site.url }}/images/compat_30.png" alt=""> 
+				{% if page.compatibility.25 == "true" %}
+                <img src="{{ site.url }}/images/compat_25.png" alt="">
+				{% endif %}
+				{% if page.compatibility.30 == "true" %}
+                <img src="{{ site.url }}/images/compat_30.png" alt="">
+				{% endif %}
 			  </p>
               <a class="btn btn-lg btn-success" href="{{ site.url }}/{{ page.slug }}/#Download" role="button">
                 <span class="glyphicon glyphicon-save"></span> Download now</a></div>
