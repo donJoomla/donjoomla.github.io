@@ -33,8 +33,7 @@ a {
 
 /* Carousel base class */
 .carousel {
-	height: 200px;
-	margin-bottom: 20px;
+	height: 250px;
 	background: -webkit-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
 	background: -o-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
 	background: -ms-linear-gradient(bottom, rgb(0, 67, 99) 0%, rgb(0, 103, 153) 100%);
@@ -175,4 +174,11 @@ footer {
 .demoFrame {
 	width:100%;
 	border:none;
+}
+#main {
+	background: #fff;
+	margin-top: -50px;
+	position: relative;
+	padding-top: 20px;
+	border-top: 5px solid #996700;
 }
