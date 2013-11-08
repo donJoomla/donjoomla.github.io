@@ -5,6 +5,7 @@
 body {
 	color: #5a5a5a;
 	margin-top:50px;
+	font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 a {
 	color:#23879E;
@@ -16,7 +17,6 @@ a:hover {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 .navbar .navbar-nav>li>a, .navbar .navbar-brand {
-	font-family: 'Share Tech Mono', sans-serif;
 	color: #ccc;
 	height: 50px;
 	line-height: 22px;
