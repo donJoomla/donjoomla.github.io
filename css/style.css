@@ -41,15 +41,14 @@ a:hover {
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
 /* Carousel base class */
 .carousel {
 	height: 250px;
-	background: -webkit-linear-gradient(bottom, #1C498B 0%, #578AD6 100%);
-	background: -o-linear-gradient(bottom, #1C498B 0%, #578AD6 100%);
-	background: -ms-linear-gradient(bottom, #1C498B 0%, #578AD6 100%);
-	background: -moz-linear-gradient(bottom, #1C498B 0%, #578AD6 100%);
-	background: linear-gradient(to top, #1C498B 0%, #578AD6 100%);
+	background: -webkit-linear-gradient(bottom, #0B5567 0%, #23879E 100%);
+	background: -o-linear-gradient(bottom, #0B5567 0%, #23879E 100%);
+	background: -ms-linear-gradient(bottom, #0B5567 0%, #23879E 100%);
+	background: -moz-linear-gradient(bottom, #0B5567 0%, #23879E 100%);
+	background: linear-gradient(to top, #0B5567 0%, #23879E 100%);
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
