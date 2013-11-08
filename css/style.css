@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	background: -ms-linear-gradient(bottom, #0B5567 0%, #23879E 100%);
 	background: -moz-linear-gradient(bottom, #0B5567 0%, #23879E 100%);
 	background: linear-gradient(to top, #0B5567 0%, #23879E 100%);
+	margin-bottom: -50px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -192,7 +193,6 @@ footer {
 }
 #main {
 	background:#f9f9f9;
-	margin-top: -50px;
 	position: relative;
 	padding-top: 20px;
 	border-top: 5px solid #FF9833;
