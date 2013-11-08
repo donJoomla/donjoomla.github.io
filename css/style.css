@@ -46,7 +46,7 @@ a {
   	z-index: 10;
   	position:static;
   	text-align:left;
-  	padding-top:100px;
+  	padding-top:50px;
 }
 
 /* Declare heights because of positioning of img element */
