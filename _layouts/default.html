@@ -6,6 +6,7 @@
   <body>
   <a class="sr-only" href="#content">Skip to main content</a> 
   {% include nav-main.html %}
+  {% if page.lead %}
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="item active">
@@ -28,6 +29,7 @@
       </div>
     </div>
   </div>
+  {% endif %}
   <div class="container" id="main">
     <div class="row">
       <div class="col-md-3">
