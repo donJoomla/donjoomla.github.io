@@ -17,12 +17,9 @@ a:hover {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-#top {
+[name^="description"] {
 	margin: -100% 0 0;
 	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
 }
 
 /* CUSTOMIZE THE NAVBAR
