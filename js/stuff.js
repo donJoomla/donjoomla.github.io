@@ -11,13 +11,9 @@ if($(".toc").length>0) {
 // sticky header	
 $('#main').waypoint(function(direction) {
 	if(direction == 'down') {
-		$('#navwrap').removeClass('navbar-wrapper');
-		$('#navbar').fadeOut(0).removeClass('navbar-static-top').addClass('navbar-fixed-top').fadeIn("slow");
 		$('#sidebar').addClass('affix');
 	}
 	else if(direction == 'up') {
-		$('#navbar').fadeOut("fast", function(){ $(this).removeClass('navbar-fixed-top').addClass('navbar-static-top').fadeIn(0) });
-		$('#navwrap').addClass('navbar-wrapper');
 		$('#sidebar').removeClass('affix');
 	}
 }, { offset: 70 });
