@@ -15,12 +15,14 @@
             {% if page.category == "extensions" %}
             <div class="pull-right text-right">
               <p>Latest release: <span class="label label-success">v{{ page.version }}</span><br>
+				{% if page.compat !== null %}
                 Compatible with: 
-				{% if page.compat.25 == true %}
+				{% if page.compat.25 !== null %}
                 <img src="{{ site.url }}/images/compat_25.png" alt="">
 				{% endif %}
-				{% if page.compat.30 == true %}
+				{% if page.compat.30 !== null %}
                 <img src="{{ site.url }}/images/compat_30.png" alt="">
+				{% endif %}
 				{% endif %}
 			  </p>
               <a class="btn btn-lg btn-success" href="{{ site.url }}/{{ page.slug }}/#Download" role="button">
