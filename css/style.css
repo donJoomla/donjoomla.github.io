@@ -196,4 +196,5 @@ footer {
 	position: relative;
 	padding-top: 20px;
 	border-top: 5px solid #FF9833;
+	margin-top: -5px;
 }
