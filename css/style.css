@@ -34,6 +34,10 @@ a:hover {
 	color:#f93;
 	text-shadow: #6C3806 0px 1px 0px;
 }
+.nav .caret {
+	border-top-color: #FF9833;
+	border-bottom-color: #FF9833;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
