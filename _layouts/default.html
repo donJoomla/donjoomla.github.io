@@ -11,14 +11,14 @@
       <div class="item active">
         <div class="container">
           <div class="carousel-caption"> 
-            {% if page.type == "extension" %}
+            {% if page.category == "extensions" %}
             <div class="pull-right text-right">
               <p>Latest release: <span class="label label-success">v{{ page.version }}</span><br>
                 Compatible with: 
                 <img src="{{ site.url }}/images/compat_25.png" alt=""> 
                 <img src="{{ site.url }}/images/compat_30.png" alt=""> 
 			  </p>
-              <a class="btn btn-lg btn-success" href="{{ site.url }}/{{ page.slug }}#Download" role="button">
+              <a class="btn btn-lg btn-success" href="{{ site.url }}/{{ page.slug }}/#Download" role="button">
                 <span class="glyphicon glyphicon-save"></span> Download now</a></div>
             {% endif %}
             <h1>{{ page.title }}</h1>
