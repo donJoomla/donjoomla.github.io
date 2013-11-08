@@ -163,11 +163,6 @@ footer {
 	text-align: center;
 	border-top: 1px solid #e5e5e5;
 }
-
-/*
- * jquery.tocify.css 1.9.0
- * Author: @gregfranko
- */
 .tocify {
     max-height: 80%;
     overflow: auto;
@@ -208,4 +203,10 @@ footer {
 	padding-top: 20px;
 	border-top: 5px solid #FF9833;
 	margin-top: -5px;
+}
+.box {
+	background: #fff;
+	padding: 15px;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
