@@ -8,10 +8,10 @@ sitemap:
     lastmod: 2013-06-11T10:12:00
 ---
 <p>
-  <a class="btn btn-default" href="{{ site.url }}/{{ site.categories[0] }}">All</a>
+  <a class="btn btn-default" href="{{ site.url }}/blog">All</a>
   {% for item in site.categories %}
   {% unless item[0] == 'blog' %}
-  <a class="btn btn-default" href="{{ site.url }}/{{ site.categories[0] }}/{{ item[0] }}">{{ item[0] | capitalize }}</a>
+  <a class="btn btn-default" href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a>
   {% endunless %}
   {% endfor %}
 </p>
