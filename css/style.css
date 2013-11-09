@@ -169,6 +169,7 @@ footer {
     moz-border-radius: 6px;
     border-radius: 6px;
 	background:#f6f6f6;
+    overflow: hidden;
 }
 .tocify {
     max-height: 80%;
