@@ -223,13 +223,13 @@ div + .box {
 	border-bottom:3px solid #ff9833;
 	margin:0 0 15px;
 }
-.post>h3 {
+.post h3 {
 	margin:0 0 15px;
 }
-.post>.thumbnail {
+.post .thumbnail {
 	margin-left: 15px;
 }
-.post>.post_meta {
+.post .post_meta {
 	background:#f3f3f3;
 	padding:10px;
 	margin:0 -15px -15px;
