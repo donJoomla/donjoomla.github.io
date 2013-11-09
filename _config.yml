@@ -1,2 +1,3 @@
-baseurl:     /
-url:         http://donjoomla.com
+baseurl:	/
+url:		http://donjoomla.com
+timezone:	Europe/London
