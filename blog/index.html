@@ -9,7 +9,7 @@ sitemap:
 ---
 <div class="row">
   <ul class="nav nav-pills">
-  {{for category site.categories}}
+  {{for category in site.categories}}
   {{unless category == 'blog'}}
     <li><a href="{{category}}">{{category}}</a></li>
   {% endunless %}
