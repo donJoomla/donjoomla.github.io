@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  
+  <body>
+  <a class="sr-only" href="#main">Skip to main content</a> {% include nav-main.html %}
+  <div class="container" id="main" role="main"> {{ content }}
+    <hr>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+  		var disqus_shortname = 'donjoomla';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+      <div class="alert alert-danger">Please enable JavaScript to view the comments.</div>
+    </noscript>
+  </div>
+  {% include footer.html %}
+  </body>
+</html>
