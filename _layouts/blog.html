@@ -1,3 +1,4 @@
+{{% if post.image == null %}}{% capture post.image %}{{site.url}}/images/donfolio.png{% endcapture %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +15,7 @@
         <div class="box post">
           <div class="media">
             <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
-            <a class="pull-left thumbnail" href="{{post.url}}"><img alt="{{post.title}}" src="{{% unless post.image == null %}}{{ post.image }}{{% else %}}{{ site.url }}/images/donfolio.png{{% endunless %}}" width="120"></a>
+            <a class="pull-left thumbnail" href="{{post.url}}"><img alt="{{post.title}}" src="{{post.image}}" width="120"></a>
             <div class="media-body"> {{post.excerpt}} </div>
           </div>
           <div class="post_meta">Written by <a href="{{site.url}}/about">Adam Bouqdib</a> in 
