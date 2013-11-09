@@ -5,24 +5,24 @@
   </head>
   
   <body>
-  <a class="sr-only" href="#main">Skip to main content</a> {% include nav-main.html %}
-  <div class="carousel slide">
-    <div class="carousel-inner">
-      <div class="item active">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>{{ post.title }}</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include nav-main.html %}
   <div class="container" id="main" role="main">
     <div class="row">
       <div class="col-sm-8"> 
-        <div class="box">
-          <h1>{{ post.title }}</h1>
+        <div class="post">
+          <h1>{{ page.title }}</h1>
           {{ content }}
+          <hr>    
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              var disqus_shortname = 'donjoomla'; 
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the comments.</noscript>
         </div>
       </div>
       <div class="col-sm-4">
@@ -31,7 +31,7 @@
             <li><a href="{{ site.url }}/blog">All</a>
             </li>
             {% for item in site.categories %}
-            {% unless item[0] == 'blog' %} <li{% post.categories contains item[0] %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a>
+            {% unless item[0] == 'blog' %} <li{% if page.categories contains item[0] %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a>
             </li>
             {% endunless %}
             {% endfor %}
@@ -39,18 +39,13 @@
         </div>
         <div class="box">
           <h3>Archive</h3>
-          <ul>
+          <ul class="list-unstyled">
             {% for post in site.posts %}
-            {% unless post.next %}
-            <h3>{{ post.date | date: '%Y' }}</h3>
-            {% else %}
-            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-            {% if year != nyear %}
-            <h3>{{ post.date | date: '%Y' }}</h3>
-            {% endif %}
-            {% endunless %}
-            <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+              {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+              {% if month != nmonth %}
+                <li><a href="{{ site.url }}/blog/archive/#{{ post.date | date: "%B'%y" }}">{{ post.date | date: "%B %Y" }}</a></li>
+              {% endif %}
             {% endfor %}
           </ul>
         </div>

@@ -1,3 +1,5 @@
+name: donJoomla
+description: Free, open-source Joomla! Extensions.
 baseurl: /
 url: http://donjoomla.com
 timezone: Europe/London
