@@ -9,7 +9,8 @@ sitemap:
 ---
 <div class="row">
   <ul class="nav nav-pills">
-  {{for category in site.categories}}
+  {{for site.category in site.categories}}
+  {{site.category}}
   {{unless category == 'blog'}}
     <li><a href="{{category}}">{{category}}</a></li>
   {% endunless %}
@@ -25,7 +26,7 @@ sitemap:
           <p>{{post.excerpt}}</p>
         </div>
       </div>
-      <div class="post_meta">Written by <a href="{{site.url}}/about">Adam Bouqdib</a> in {{post.categories[1].title}} &middot; {{post.date | date: "%A, %-d %B %Y"}} &middot; <a href="{{post.url}}#disqus_thread"></a></div>
+      <div class="post_meta">Written by <a href="{{site.url}}/about">Adam Bouqdib</a> in {{ post.categories[1] | capitalize }} &middot; {{post.date | date: "%A, %-d %B %Y"}} &middot; <a href="{{post.url}}#disqus_thread"></a></div>
     </div>
     {% endfor %} </div>
   <div class="col-sm-4">
