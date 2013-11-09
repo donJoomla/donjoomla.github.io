@@ -9,11 +9,11 @@ sitemap:
 ---
 <div class="row">
   <div class="col-sm-8"> 
-    <div class="nav nav-pills">
+    <ul class="nav nav-pills">
     {% for category in site.categories.blog %}
-    <a href="{{category}}">{{category}}</a>
+    <li><a href="{{category}}">{{category}}</a></li>
     {% endfor %}
-    </div>
+    </ul>
     {% for post in site.posts %}
     <div class="box">
       <div class="media">
