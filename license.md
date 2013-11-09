@@ -1,9 +1,6 @@
 ---
 layout: default
 title: GNU GENERAL PUBLIC LICENSE
-slug: license
-lead: ""
-base_url: "../"
 ---
 GNU GENERAL PUBLIC LICENSE
 ==========================
