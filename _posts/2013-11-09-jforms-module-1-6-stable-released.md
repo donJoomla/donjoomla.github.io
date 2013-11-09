@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: JForms Module 1.6 stable released
 categories: 
 - Blog
