@@ -5,8 +5,7 @@
   </head>
   
   <body>
-  <a class="sr-only" href="#content">Skip to main content</a> 
-  {% include nav-main.html %}
+  <a class="sr-only" href="#content">Skip to main content</a> {% include nav-main.html %}
   <div class="carousel slide">
     <div class="carousel-inner">
       <div class="item active">
@@ -20,55 +19,58 @@
     </div>
   </div>
   <div class="container" id="main" role="main">
-  
-<div class="row">
-  <div class="col-sm-8"> {% for post in site.categories.{{page.slug}} %}
-    <div class="box">
-      <div class="media">
-        <h3 class="media-heading"><a href="{{post.url}}">{{ post.title }}</a></h3>
-        <a class="pull-left thumbnail" href="{{post.url}}"><img alt="{{post.title}}" src="{{post.image}}" width="120"></a>
-        <div class="media-body">
-          {{post.excerpt}}
+    <div class="row">
+      <div class="col-sm-8"> 
+        {% for post in site.categories.blog %}
+        {% if post.categories contains {{page.slug}} %}
+        <div class="box">
+          <div class="media">
+            <h3 class="media-heading"><a href="{{post.url}}">{{ post.title }}</a></h3>
+            <a class="pull-left thumbnail" href="{{post.url}}"><img alt="{{post.title}}" src="{{post.image}}" width="120"></a>
+            <div class="media-body"> {{post.excerpt}} </div>
+          </div>
+          <div class="post_meta">Written by <a href="{{site.url}}/about">Adam Bouqdib</a> in 
+            <a href="{{site.url}}/{{post.categories | join: "/"}}">{{post.categories | last | capitalize}}</a> 
+            &middot; {{post.date | date: "%A, %-d %B %Y"}} &middot; <a href="{{post.url}}#disqus_thread"></a></div>
+        </div>
+        {% endif %} 
+        {% endfor %} 
+      </div>
+      <div class="col-sm-4">
+        <div class="nav-menu">
+          <ul class="nav nav-list">
+            <li{% if item[0] == page.slug %} class="active"{% endif %}><a href="{{ site.url }}/blog">All</a>
+            </li>
+            {% for item in site.categories %}
+            {% unless item[0] == 'blog' %} <li{% if item[0] == page.slug %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a>
+            </li>
+            {% endunless %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Archive</h3>
+          <ul>
+            {% for post in site.posts %}
+            
+            {% unless post.next %}
+            <h3>{{ post.date | date: '%Y' }}</h3>
+            {% else %}
+            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+            {% if year != nyear %}
+            <h3>{{ post.date | date: '%Y' }}</h3>
+            {% endif %}
+            {% endunless %}
+            <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
-      <div class="post_meta">Written by <a href="{{site.url}}/about">Adam Bouqdib</a> in <a href="{{site.url}}/{{post.categories | join: "/"}}">{{post.categories | last | capitalize}}</a> &middot; {{post.date | date: "%A, %-d %B %Y"}} &middot; <a href="{{post.url}}#disqus_thread"></a></div>
-    </div>
-    {% endfor %} </div>
-  <div class="col-sm-4">
-    <div class="nav-menu">
-      <ul class="nav nav-list">
-        <li{% if item[0] == page.slug %} class="active"{% endif %}><a href="{{ site.url }}/blog">All</a></li>
-        {% for item in site.categories %}
-        {% unless item[0] == 'blog' %}
-        <li{% if item[0] == page.slug %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a></li>
-        {% endunless %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Archive</h3>
-      <ul>
-        {% for post in site.posts %}
-        
-        {% unless post.next %}
-        <h3>{{ post.date | date: '%Y' }}</h3>
-        {% else %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-        {% if year != nyear %}
-        <h3>{{ post.date | date: '%Y' }}</h3>
-        {% endif %}
-        {% endunless %}
-        <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
     </div>
   </div>
-</div>
-</div>
   {% include footer.html %}
-  </body>
-<script>
+  <script>
 	var disqus_shortname = 'donjoomla';
 	(function () {
 	var s = document.createElement('script'); s.async = true;
@@ -76,5 +78,6 @@
 	s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
 	(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 	}());
-</script>
+  </script>
+  </body>
 </html>
