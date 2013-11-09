@@ -12,7 +12,7 @@ sitemap:
     {% for post in site.posts %}
     <div class="media box">
       <h3 class="media-heading"><a href="{{post.url}}">{{post.title}}</a></h3>
-      <a class="pull-left" href="{{post.url}}"><img alt="{{post.title}}" src="{{post.image}}" width="120"></a>
+      <a class="pull-left thumbnail" href="{{post.url}}"><img alt="{{post.title}}" src="{{post.image}}" width="120"></a>
       <div class="media-body">
         <p>{{post.excerpt}}</p>
       </div>
