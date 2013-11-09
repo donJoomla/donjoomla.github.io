@@ -50,7 +50,7 @@
         </div>
         <div class="box">
           <h3>Archive</h3>
-          <ul>
+          <ul class="list-unstyled">
             {% for post in site.posts %}
               {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
               {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
