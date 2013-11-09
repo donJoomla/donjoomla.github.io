@@ -213,6 +213,9 @@ footer {
 	overflow: hidden;
 	zoom: 1;
 }
+.box+.box {
+	margin-top:20px;
+}
 .box>.post_meta {
 	background:#f3f3f3;
 	padding:10px;

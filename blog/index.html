@@ -24,7 +24,7 @@ sitemap:
     <div class="box">
       <h3 class="media-heading">Categories</h3>
       <ul class="nav nav-list">
-        <li><a href="{{ site.url }}/blog">All</a></li>
+        <li><a class="active" href="{{ site.url }}/blog">All</a></li>
         {% for item in site.categories %}
         {% unless item[0] == 'blog' %}
         <li><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a></li>
