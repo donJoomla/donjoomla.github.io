@@ -40,7 +40,7 @@ sitemap:
 	  {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
 	  {% if month != nmonth %}
 	    {% if forloop.index != 1 %}</ul>{% endif %}
-	    <li><a href="{{ site.url }}/blog/archive/#{{ post.date | date: "%B%y" }}">{{ post.date | date: "%B %Y" }}</a></li>
+	    <li><a href="{{ site.url }}/blog/archive/#{{ post.date | date: "%B'%y" }}">{{ post.date | date: "%B %Y" }}</a></li>
 	  {% endif %}
 	{% endfor %}
       </ul>
