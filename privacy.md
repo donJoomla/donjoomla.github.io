@@ -1,9 +1,6 @@
 ---
 layout: default
 title: Privacy Policy
-slug: privacy
-lead: ""
-base_url: "../"
 ---
 
 This privacy policy sets out how “donjoomla.com” uses and protects any information that you give “donjoomla.com” when you use this website.
