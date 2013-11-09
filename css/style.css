@@ -246,3 +246,14 @@ footer {
 	padding: 0;
 	list-style: none;
 }
+.social-buttons li {
+	display: inline-block;
+	line-height: 1;
+	padding: 5px 8px;
+}
+.social-buttons .twitter-follow-button {
+	width: 225px !important;
+}
+.social-buttons .twitter-share-button {
+	width: 98px !important;
+}
