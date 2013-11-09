@@ -13,5 +13,4 @@ The site may *only* be launching with 3 **Joomla! extensions** but whenever I ha
 
 To stay up-to-date with my new release why not follow me on Twitter: [@donjoomla](https://twitter.com/donjoomla)
 
-Rather than go rambling on about what else I'm going to do and how smug I feel about it I'm going to get back to work.  
-Stay tuned!
+Rather than go rambling on about what else I'm going to do and how smug I feel about it I'm going to get back to work. Stay tuned!
