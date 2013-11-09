@@ -211,7 +211,7 @@ footer {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 }
-.box .post_meta {
+.box>.post_meta {
 	background:#ccc;
 	padding:10px;
 	margin:15px -15px -15px;
