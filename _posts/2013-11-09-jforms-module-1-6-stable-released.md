@@ -4,7 +4,7 @@ title: JForms Module 1.6 stable released
 categories: 
 - Blog
 - Releases
-image: http://donjoomla.com/images/logo.png
+image: http://donjoomla.com/images/donjoomla.png
 tag: 
 - JForms Module
 ---
