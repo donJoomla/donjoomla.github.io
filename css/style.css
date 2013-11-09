@@ -245,6 +245,7 @@ footer {
 	padding: 0;
 	list-style: none;
 	float:right;
+	clear:right;
 }
 .social-buttons li {
 	display: inline-block;
