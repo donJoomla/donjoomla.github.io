@@ -8,7 +8,6 @@ sitemap:
     lastmod: 2013-06-11T10:12:00
 ---
 {% for item in site.categories %}
-{% unless item[0] == 'blog' %}
 <a class="btn btn-default" href="{{ site.url }}/{{ site.categories | first }}{% unless item[0] == 'blog' %}/{{ item[0] }}{% endunless %}">{{ item[0] | capitalize }}</a>
 {% endfor %}
 <br>
