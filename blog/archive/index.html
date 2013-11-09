@@ -9,13 +9,14 @@ sitemap:
 ---
 {% for post in site.posts %}
         
+      {% if forloop.index != 1 %}</ul>{% endif %}
         {% unless post.next %}
         <h3>{{ post.date | date: '%Y' }}</h3>
         {% else %}
         {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
         {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
         {% if year != nyear %}
-        <h3>{{ post.date | date: '%Y' }}</h3>
+        <h2>{{ post.date | date: '%Y' }}</h2>
         {% endif %}
         {% endunless %}
 		
@@ -23,7 +24,7 @@ sitemap:
   {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
     {% if month != nmonth %}
       {% if forloop.index != 1 %}</ul>{% endif %}
-      <h3>{{ post.date | date: '%B %Y' }}</h3><ul>
+      <h3>{{ post.date | date: '%B' }}</h3><ul>
     {% endif %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   <time>{{ post.date | date: "%e %B %Y" }}</time>
