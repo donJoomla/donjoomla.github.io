@@ -12,6 +12,8 @@ I'm happy to announce the release of JForms Module 1.6!
 
 #### New features include:
 
+- **Live Update**  
+Update the extension from your Joomla! back-end
 - **Google Spreadsheets Plugin**  
 Save the submitted form data straight to a Google Spreadsheet!
 - **Your Mailing List Plugin**  
