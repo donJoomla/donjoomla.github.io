@@ -228,3 +228,9 @@ footer {
 	text-align: center;
 	border-top: 1px solid #e5e5e5;
 }
+#disqus_thread {
+	overflow: hidden;
+}
+#disqus_thread iframe{
+	margin-bottom: -60px;
+}
