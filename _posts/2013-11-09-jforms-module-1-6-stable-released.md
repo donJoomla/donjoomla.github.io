@@ -10,7 +10,7 @@ tag:
 ---
 I'm happy to announce the release of JForms Module 1.6!
 
-### New features include:
+#### New features include:
 
 - **Google Spreadsheets Plugin**  
 Save the submitted form data straight to a Google Spreadsheet!
