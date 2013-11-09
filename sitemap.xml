@@ -14,7 +14,7 @@ layout: nil
   {% elsif page.slug contains 'blog' %}
   <url>
     <loc>{{ site.url }}{{ page.url | remove: 'index' | remove: '.html' }}</loc>
-    <lastmod>{{ site.posts[0] | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ site.posts[0].date | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
