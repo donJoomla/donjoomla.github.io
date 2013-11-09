@@ -205,9 +205,14 @@ footer.affix {
 div + .box {
 	margin-top:30px;
 }
-.box>h3, .post>h1 {
+.box>h3 {
 	border-bottom:3px solid #ff9833;
 	margin:0 0 15px;
+}
+.post h1 {
+	padding-bottom: 9px;
+	margin: 0 0 20px;
+	border-bottom: 1px solid #eee;
 }
 .post h3 {
 	margin:0 0 15px;
