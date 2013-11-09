@@ -200,9 +200,9 @@ footer {
 #main {
 	background:#f9f9f9;
 	position: relative;
-	padding-top: 20px;
+	padding: 30px;
 	border-top: 5px solid #FF9833;
-	margin-top: -5px;
+	margin: -5px -15px 0;
 }
 .box {
 	background: #fff;
