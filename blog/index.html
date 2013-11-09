@@ -8,10 +8,11 @@ sitemap:
     lastmod: 2013-06-11T10:12:00
 ---
 <div class="row">
-{{ site.categories }}
   <ul class="nav nav-pills">
-    {% for item in site.categories unless item[0] == 'blog' %}
+    {% for item in site.categories %}
+    {% if item[0] !== 'blog' %}
     <li><a href="{{ site.url }}/{{ page.slug }}/{{ item[0] }}">{{ item[0] | capitalize }}</a></li>
+    {% endif %}
     {% endfor %}
   </ul>
   <div class="col-sm-8"> 
