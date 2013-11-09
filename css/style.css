@@ -216,7 +216,7 @@ footer {
 	overflow: hidden;
 	zoom: 1;
 }
-.box + .box {
+div + .box {
 	margin-top:30px;
 }
 .box>h3 {
