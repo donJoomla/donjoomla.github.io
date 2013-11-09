@@ -8,11 +8,11 @@ sitemap:
     lastmod: 2013-06-11T10:12:00
 ---
 <div class="row">
-{{site.categories.blog.categories}}
   <ul class="nav nav-pills">
-    {% for categories in site.categories.blog %}
-    <li><a href="{{category.title}}">{{category.title}}</a></li>
-    {% endfor %}
+  {{for category site.categories}}
+  {{unless category == 'blog'}}
+    <li><a href="{{category}}">{{category}}</a></li>
+  {% endfor %}
   </ul>
   <div class="col-sm-8"> 
     {% for post in site.posts %}
