@@ -213,8 +213,12 @@ footer {
 	overflow: hidden;
 	zoom: 1;
 }
-.box+.box {
-	margin-top:20px;
+.box + .box {
+	margin-top:30px;
+}
+.box>h3 {
+	border-bottom:3px solid #ff9833;
+	margin:0 0 15px;
 }
 .box>.post_meta {
 	background:#f3f3f3;
