@@ -210,6 +210,8 @@ footer {
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
+	overflow: hidden;
+	zoom: 1;
 }
 .box>.post_meta {
 	background:#f3f3f3;
