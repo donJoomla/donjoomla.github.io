@@ -3,6 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    {% unless page.image == null %}
+    <meta property="og:image" content="{{ site.url }}/{{ page.image }}" />
+    {% else %}
+    <meta property="og:image" content="{{ site.url }}/images/donjoomla.png" />
+    {% endunless %}
+
 
     <title>  
     {% if page.title == "donJoomla" %}

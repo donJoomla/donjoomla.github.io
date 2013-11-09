@@ -4,7 +4,6 @@ title: donJoomla has launched! Hurray!
 categories: 
 - Blog
 - Announcements
-image: http://donjoomla.com/images/logo.png
 --- 
 Wow, I cannot believe it. I've been thinking about making this site for so long I started thinking I was never going to make it. I actually bought the domain nearly 2 years ago but never got round to it as I've always been way too busy with work but I guess all it took was some time off in the Moroccan sun (where I still am right now).  
 I know it's still a bit rough round the edges and could do with a lot more content but it's a work in progress and the biggest hurdle is over.
