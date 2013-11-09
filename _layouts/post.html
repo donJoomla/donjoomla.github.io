@@ -39,18 +39,13 @@
         </div>
         <div class="box">
           <h3>Archive</h3>
-          <ul>
+          <ul class="list-unstyled">
             {% for post in site.posts %}
-            {% unless post.next %}
-            <h3>{{ post.date | date: '%Y' }}</h3>
-            {% else %}
-            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-            {% if year != nyear %}
-            <h3>{{ post.date | date: '%Y' }}</h3>
-            {% endif %}
-            {% endunless %}
-            <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+              {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+              {% if month != nmonth %}
+                <li><a href="{{ site.url }}/blog/archive/#{{ post.date | date: "%B'%y" }}">{{ post.date | date: "%B %Y" }}</a></li>
+              {% endif %}
             {% endfor %}
           </ul>
         </div>
