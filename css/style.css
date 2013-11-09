@@ -227,7 +227,7 @@ div + .box {
 	margin:0 0 15px;
 }
 .post .thumbnail {
-	margin-left: 15px;
+	margin: 0 15px 0 0;
 }
 .post .post_meta {
 	background:#f3f3f3;
