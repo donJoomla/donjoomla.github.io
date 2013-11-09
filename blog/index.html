@@ -7,13 +7,10 @@ sitemap:
     changefreq: monthly
     lastmod: 2013-06-11T10:12:00
 ---
-<ul class="nav">
-  {% for item in site.categories %}
-  {% unless item[0] == 'blog' %}
-  <li><a class="btn btn-default" href="{{ site.url }}/{{ page.slug }}/{{ item[0] }}">{{ item[0] | capitalize }}</a></li>
-  {% endunless %}
-  {% endfor %}
-</ul>
+{% for item in site.categories %}
+{% unless item[0] == 'blog' %}
+<a class="btn btn-default" href="{{ site.url }}/{{ site.categories[0] }}{% unless item[0] == 'blog' %}/{{ item[0] }}{% endunless %}">{{ item[0] | capitalize }}</a>
+{% endfor %}
 <br>
 <div class="row">
   <div class="col-sm-8"> {% for post in site.posts %}
