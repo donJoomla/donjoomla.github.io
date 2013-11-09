@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Announcements
-slug: blog/announcements
+slug: announcements
 sitemap:
     priority: 0.7
     changefreq: monthly
@@ -26,7 +26,7 @@ sitemap:
         <li><a href="{{ site.url }}/blog">All</a></li>
         {% for item in site.categories %}
         {% unless item[0] == 'blog' %}
-        <li{% if item[0] == 'announcements' %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a></li>
+        <li{% if item[0] == page.slug %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a></li>
         {% endunless %}
         {% endfor %}
       </ul>
