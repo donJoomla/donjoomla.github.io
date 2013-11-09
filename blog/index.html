@@ -10,8 +10,8 @@ sitemap:
 <div class="row">
 {{ site.categories }}
   <ul class="nav nav-pills">
-    {% for item in site.categories unless item == 'blog' %}
-    <li><a href="{{ site.url }}/{{ item }}">{{ item }}</a></li>
+    {% for item in site.categories unless item[0] == 'blog' %}
+    <li><a href="{{ site.url }}/{{ item[0] }}">{{ item[0] }}</a></li>
     {% endfor %}
   </ul>
   <div class="col-sm-8"> 
