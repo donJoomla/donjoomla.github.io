@@ -8,12 +8,12 @@ sitemap:
     lastmod: 2013-06-11T10:12:00
 ---
 <div class="row">
-  <div class="col-sm-8"> 
-    <ul class="nav nav-pills">
+  <ul class="nav nav-pills">
     {% for categories in site.categories.blog %}
     <li><a href="{{category.title}}">{{category.title}}</a></li>
     {% endfor %}
-    </ul>
+  </ul>
+  <div class="col-sm-8"> 
     {% for post in site.posts %}
     <div class="box">
       <div class="media">
@@ -23,7 +23,7 @@ sitemap:
           <p>{{post.excerpt}}</p>
         </div>
       </div>
-      <div class="post_meta">Written by <a href="{{site.url}}/about">Adam Bouqdib</a> in {{post.categories[1]}} &middot; {{post.date | date: "%A, %-d %B %Y"}} &middot; <a href="{{post.url}}#disqus_thread"></a></div>
+      <div class="post_meta">Written by <a href="{{site.url}}/about">Adam Bouqdib</a> in {{post.categories[1].title}} &middot; {{post.date | date: "%A, %-d %B %Y"}} &middot; <a href="{{post.url}}#disqus_thread"></a></div>
     </div>
     {% endfor %} </div>
   <div class="col-sm-4">
