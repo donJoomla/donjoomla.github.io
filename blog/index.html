@@ -9,9 +9,6 @@ sitemap:
 ---
 <div class="row">
   <ul class="nav nav-pills">
-  {{for site.categories}}
-    <li><a href="{{site.category}}">{{site.category}}</a></li>
-  {% endfor %}
   </ul>
   <div class="col-sm-8"> 
     {% for post in site.posts %}
