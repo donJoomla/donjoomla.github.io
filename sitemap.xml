@@ -11,6 +11,13 @@ layout: nil
     <changefreq>{{ page.sitemap.changefreq }}</changefreq>
     <priority>{{ page.sitemap.priority }}</priority>
   </url>
+  {% else page.slug contains 'blog' %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | remove: 'index' | remove: '.html' }}</loc>
+    <lastmod>{{ site.posts[0] | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   {% endif %}
   {% endfor %}
   {% for post in site.posts %}
