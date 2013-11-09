@@ -25,7 +25,8 @@ Includes layouts for Bootstrap 3 as well as Bootstrap 2 now.
 - **Custom JS API**  
 JavaScript API to call your own functions on various form events (eg. when sent etc.). Documentation to follow.
 - **Performance**  
-The module has undergone numerous improvements to optimise performance, including moving all the JavaScript to a separate file and various PHP tweaks
+The module has undergone numerous improvements to optimise performance, including moving all the JavaScript to a separate file and various PHP tweaks  
+
 
 
 
