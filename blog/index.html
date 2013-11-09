@@ -12,6 +12,7 @@ sitemap:
   {{for category site.categories}}
   {{unless category == 'blog'}}
     <li><a href="{{category}}">{{category}}</a></li>
+  {% endunless %}
   {% endfor %}
   </ul>
   <div class="col-sm-8"> 
