@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: Blogging Like a Hacker
 category: Tutorials
 image: http://donjoomla.com/images/logo.png
