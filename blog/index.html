@@ -10,7 +10,7 @@ sitemap:
 <div class="row">
   <div class="col-sm-8"> 
     <ul class="nav nav-pills">
-    {% for category in site.categories.blog %}
+    {% for categories in site.categories.blog %}
     <li><a href="{{category.title}}">{{category.title}}</a></li>
     {% endfor %}
     </ul>
