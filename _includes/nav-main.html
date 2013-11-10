@@ -23,12 +23,12 @@
         <li{% if page.slug == "about" %} class="active"{% endif %}><a rel="author" href="{{ site.url }}/about">About</a></li>
         <!--li{% if page.slug == "contact" %} class="active"{% endif %}><a href="{{ site.url }}/contact">Contact</a></li-->
       </ul>
-	  <div class="navbar-right">
-	    <form action="{{ site.url }}/search" method="get" class="form-inline">
+	  <form action="{{ site.url }}/search" method="get" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
 		  <input class="form-control" type="search" name="q" placeholder="Enter keyword or phrase" autocomplete="off" id="search_control">
-		  <button type="submit" class="btn btn-primary" value="Search">Search</button>
-		</form>
-	  </div>
+		</div>
+		<button type="submit" class="btn btn-primary" value="Search">Search</button>
+      </form>
     </nav>
   </div>
 </div>
