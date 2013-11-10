@@ -260,11 +260,3 @@ footer {
 }
 
 /* Google Search Overrides */
-.gsc-control-cse, .gsc-control-cse .gsc-table-result {
-	font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 14px;
-}
-.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top  {
-	padding-left:0;
-	padding-right:0;
-}
