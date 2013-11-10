@@ -34,10 +34,12 @@
   <script type="text/javascript"> 
   google.load('search', '1', {language : 'en', nocss : true});
   google.setOnLoadCallback(function() {
-    var customSearchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
-    customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+    var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
+    searchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
     var options = new google.search.DrawOptions();
     options.setAutoComplete(true);
-    customSearchControl.draw('cse', options);
+	//var options = new google.search.SearcherOptions();
+	options.setRoot(document.getElementById("search_results"));
+    searchControl.draw(document.getElementById("search_control"));
   }, true);
   </script>
