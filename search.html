@@ -7,4 +7,27 @@ sitemap:
     changefreq: monthly
     lastmod: 2013-11-09T7:30:00
 ---
-<div id="search_results"></div>
+<div id="search_results">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+  google.load('search', '1', {language : 'en', nocss : true});
+  google.setOnLoadCallback(function(){
+    var customSearchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    customSearchControl.draw(document.getElementById("search_control"));
+   // $(".gsc-input").val("<?php echo $_POST['q']; ?>");//insert into search field requested search text
+   // $(".gsc-search-button").click();//call button click event, show results
+  }, true);
+</script>
+
+
+  <script type="text/javascript"> /*
+  google.load('search', '1', {language : 'en', nocss : true});
+  google.setOnLoadCallback(function() {
+    var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
+    searchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+	var options = new google.search.SearcherOptions();
+	options.setRoot(document.getElementById("search_results"));
+    searchControl.draw(document.getElementById("search_control"));
+  }, true);*/
+  </script>
