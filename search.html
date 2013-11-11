@@ -10,15 +10,30 @@ sitemap:
 <div id="search_results">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
-  google.load('search', '1', {language : 'en', nocss : true, "callback" : cseBootstrap});
-  google.setOnLoadCallback(function() {
-    var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
-    searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET );
-    searchControl.draw(document.getElementById("search_results"));
-  }, true);
-  function cseBootstrap() {
-	$('input.gsc-input').addClass('form-control');
-	$('input.gsc-search-button').addClass('btn btn-primary');
-	$('a.gs-title').addClass('h3');
-  }
+	(function($) {
+		$.QueryString = (function(a) {
+			if (a == "") return {};
+			var b = {};
+			for (var i = 0; i < a.length; ++i)
+			{
+				var p=a[i].split('=');
+				if (p.length != 2) continue;
+				b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+			}
+			return b;
+		})(window.location.search.substr(1).split('&'))
+	})(jQuery);
+
+	google.load('search', '1', {language : 'en', nocss : true, "callback" : cseBootstrap});
+	google.setOnLoadCallback(function() {
+		var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
+		searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET );
+		searchControl.draw(document.getElementById("search_results"));
+		searchControl.execute($.QueryString["q"]);
+	}, true);
+	function cseBootstrap() {
+		$('input.gsc-input').addClass('form-control');
+		$('input.gsc-search-button').addClass('btn btn-primary');
+		$('a.gs-title').addClass('h3');
+	}
 </script>
