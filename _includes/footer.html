@@ -45,12 +45,10 @@
 						tokens: item
 					};
 				});
-			},
-			'updater' : function(item) {
-				this.$element[0].value = item;
-			        this.$element[0].form.submit();
-			        return item;
 			}
 		}
-	});
+	})
+	.on('typeahead:selected', function(e){
+		e.target.form.submit();
+	};
   </script>
