@@ -1,9 +1,7 @@
 ---
 ---
 [
-  {% for page in site.pages %}"{{ page.title }}",
-  {% endfor %}
-  {% for post in site.posts %}"{{ post.title }}",
-  {% endfor %}
-  ""
+  {% for page in site.pages %}{% unless page.title == null %}"{{ page.title }}",
+  {% endfor %}{% for post in site.posts %}"{{ post.title }}",
+  {% endfor %}""
 ]
