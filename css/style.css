@@ -399,7 +399,7 @@ table.gsc-search-box {
 	border: 1px solid #ddd;
 	cursor:pointer;
 }
-.gsc-cursor-page:focus, .gsc-cursor-page:focus {
+.gsc-cursor-page:hover, .gsc-cursor-page:focus {
 	background-color: #eee;
 }
 .gsc-cursor-current-page {
