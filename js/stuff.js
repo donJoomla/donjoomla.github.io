@@ -14,7 +14,7 @@ waypointCallback = function () {
         offset: 70
     });
 }
-$.getScript('{{ site.url }}/js/waypoints.min.js', waypointCallback);
+$.getScript('//cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.7.0/jquery.tocify.min.js', waypointCallback);
 
 // search autocomplete
 typeaheadCallback = function () {
@@ -37,7 +37,7 @@ typeaheadCallback = function () {
         e.target.form.submit();
     });
 }
-$.getScript('http://twitter.github.io/typeahead.js/releases/latest/typeahead.js', typeaheadCallback);
+$.getScript('//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js', typeaheadCallback);
 
 // tocify
 if ($(".toc").length > 0) {
@@ -53,7 +53,7 @@ if ($(".toc").length > 0) {
     };
 
     $.getScript('{{{ site.url }}/js/jquery-ui-1.9.1.custom.min.js', function () {
-        $.getScript('{{ site.url }}/js/jquery.tocify.min.js', tocCallback);
+        $.getScript('//cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.7.0/jquery.tocify.min.js', tocCallback);
     });
 }
 
