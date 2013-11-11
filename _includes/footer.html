@@ -34,12 +34,14 @@
   <script src="//www.google.com/jsapi" type="text/javascript"></script>
   <script type="text/javascript">
   
-	var cseData = $.ajax({
-		url: "http://clients1.google.com/complete/search?q=" + query + "&hl=en&client=firefox&nocache=" + Math.random().toString(),
-		dataType: "jsonp"
-	}).done(function( data ) {
-		return data[1]
-	});
+	var cseData = function (query) {
+		$.ajax({
+			url: "http://clients1.google.com/complete/search?q=" + query + "&hl=en&client=firefox&nocache=" + Math.random().toString(),
+			dataType: "jsonp"
+		}).done(function( data ) {
+			return data[1]
+		});
+	}
 	$(function () {
 		$('#search_control').typeahead([
 			{
