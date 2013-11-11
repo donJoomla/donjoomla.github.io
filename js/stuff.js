@@ -1,24 +1,6 @@
 ---
 ---
 // stuff for the things...
-function loadScript(src, callback) {
-    var s,
-    r,
-    t;
-    r = false;
-    s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.src = src;
-    s.onload = s.onreadystatechange = function () {
-        //console.log( this.readyState ); //uncomment this line to see which ready states are called.
-        if (!r && (!this.readyState || this.readyState == 'complete')) {
-            r = true;
-            callback();
-        }
-    };
-    t = document.getElementsByTagName('script')[0];
-    t.parent.insertBefore(s, t);
-}
 
 // sticky header
 waypointCallback = function () {
@@ -32,7 +14,7 @@ waypointCallback = function () {
         offset: 70
     });
 }
-loadScript('{{ site.url }}/js/waypoints.min.js', waypointCallback);
+$.getScript('{{ site.url }}/js/waypoints.min.js', waypointCallback);
 
 // search autocomplete
 typeaheadCallback = function () {
@@ -55,7 +37,7 @@ typeaheadCallback = function () {
         e.target.form.submit();
     });
 }
-loadScript('http://twitter.github.io/typeahead.js/releases/latest/typeahead.js', typeaheadCallback);
+$.getScript('http://twitter.github.io/typeahead.js/releases/latest/typeahead.js', typeaheadCallback);
 
 // tocify
 if ($(".toc").length > 0) {
@@ -70,14 +52,14 @@ if ($(".toc").length > 0) {
         });
     };
     
-    loadScript('{{{ site.url }}/js/jquery-ui-1.9.1.custom.min.js', function() {
-    	loadScript('{{ site.url }}/js/jquery.tocify.min.js', tocCallback);
+    $.getScript('{{{ site.url }}/js/jquery-ui-1.9.1.custom.min.js', function() {
+    	$.getScript('{{ site.url }}/js/jquery.tocify.min.js', tocCallback);
     });
 }
 
 // iframe auto-height
 if ($(".demoFrame").length > 0) {
-    loadScript('{{ site.url }}/js/jquery.iframeheight.min.js', function () {
+    $.getScript('{{ site.url }}/js/jquery.iframeheight.min.js', function () {
         $(".demoFrame").iframeHeight();
     });
     /*  should it be like this? I don't know...
