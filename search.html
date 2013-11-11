@@ -5,7 +5,7 @@ slug: search
 sitemap:
     priority: 0.7
     changefreq: monthly
-    lastmod: 2013-11-09T7:30:00
+    lastmod: 2013-11-11T10:00:00
 ---
 <div id="search_results">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -16,10 +16,22 @@ sitemap:
 		searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET );
 		searchControl.draw(document.getElementById("search_results"));
 		searchControl.execute($.QueryString["q"]);
+		customSearchControl.setSearchStartingCallback({}, function() {
+        var q =  customSearchControl.getInputQuery();
+        window.location.search = '?q='+q;
+        //pushState('?q='+q);
+    });
 	}, true);
 	function cseBootstrap() {
 		$('input.gsc-input').addClass('form-control');
 		$('input.gsc-search-button').addClass('btn btn-primary');
 		$('a.gs-title').addClass('h3');
+	}
+	function pushState() {
+		if (typeof(window.history.pushState) == 'function') {
+			window.history.pushState(null, path, path);
+		} else {
+			window.location.hash = '#!' + path;
+		}
 	}
 </script>
