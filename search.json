@@ -2,6 +2,6 @@
 ---
 [
   {% for page in site.pages %}{% unless page.title == "" %}"{{ page.title }}",
-  {% endfor %}{% for post in site.posts %}"{{ post.title }}",
+  {% endunless %}{% endfor %}{% for post in site.posts %}"{{ post.title }}",
   {% endfor %}""
 ]
