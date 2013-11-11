@@ -16,11 +16,11 @@ sitemap:
 		searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET );
 		searchControl.draw(document.getElementById("search_results"));
 		searchControl.execute($.QueryString["q"]);
-		customSearchControl.setSearchStartingCallback({}, function() {
-        var q =  customSearchControl.getInputQuery();
-        window.location.search = '?q='+q;
-        //pushState('?q='+q);
-    });
+		searchControl.setSearchStartingCallback({}, function() {
+        		var q =  searchControl.getInputQuery();
+        		window.location.search = '?q='+q;
+        		//pushState('?q='+q);
+		})
 	}, true);
 	function cseBootstrap() {
 		$('input.gsc-input').addClass('form-control');
