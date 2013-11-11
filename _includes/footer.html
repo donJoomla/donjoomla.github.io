@@ -45,7 +45,11 @@
 						tokens: item
 					};
 				});
+			},
+			'updater' : function(item) {
+				this.$element[0].value = item;
+			        this.$element[0].form.submit();
+			        return item;
 			}
-		}
 	});
   </script>
