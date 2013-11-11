@@ -317,3 +317,6 @@ footer {
     border: 1px solid transparent;
     border-radius:4px;
 }
+.gs-watermark { /* remove google "clipped by" text */
+	display:none; 
+}
