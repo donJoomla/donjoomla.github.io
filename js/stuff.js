@@ -68,7 +68,7 @@ if ($(".toc").length > 0) {
         $(".optionName").popover({
             trigger: "hover"
         });
-    })();
+    };
     
     loadScript('{{{ site.url }}/js/jquery-ui-1.9.1.custom.min.js', function() {
     	loadScript('{{ site.url }}/js/jquery.tocify.min.js', tocCallback);
