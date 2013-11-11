@@ -317,7 +317,7 @@ footer {
     border: 1px solid transparent;
     border-radius:4px;
 }
-.gs-watermark, .gsc-resultsHeader, .gsc-tabsAreaInvisible, .gs-visibleUrl-short {
+.gs-watermark, .gsc-resultsHeader, .gsc-tabsAreaInvisible, .gs-visibleUrl-short, .gsc-url-top, .gsc-thumbnail-inside {
 	display:none; 
 }
 .gs-title {
