@@ -36,7 +36,9 @@
 	$(function () {
 		$('#search_control').typeahead([
 			{
-				local: function (request, response) {
+				remote: function (request, response) {
+				console.log(request);
+				console.log(response);
                   $.ajax({
                       url: "http://clients1.google.com/complete/search?q=" + request.term + "&hl=en&client=partner&source=gcsc&partnerid={014812861817308790526:-rrfwxely2g}&ds=cse&nocache=" + Math.random().toString(),
                       dataType: "jsonp",
