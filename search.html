@@ -22,11 +22,6 @@ sitemap:
         		//pushState('?q='+q);
 		})
 	}, true);
-	function cseBootstrap() {
-		$('input.gsc-input').addClass('form-control');
-		$('input.gsc-search-button').addClass('btn btn-primary');
-		$('a.gs-title').addClass('h3');
-	}
 	function pushState() {
 		if (typeof(window.history.pushState) == 'function') {
 			window.history.pushState(null, path, path);
