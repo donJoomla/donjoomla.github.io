@@ -8,26 +8,3 @@ sitemap:
     lastmod: 2013-11-11T10:00:00
 ---
 <div id="search_results">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript">
-	var pageTitle = document.title;
-	google.load('search', '1', {language : 'en', nocss : true});
-	google.setOnLoadCallback(function() {
-		var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
-		searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET );
-		searchControl.draw(document.getElementById("search_results"));
-		searchControl.setSearchStartingCallback({}, function() {
-        		var q =  searchControl.getInputQuery();
-        		pushState("{{page.url | remove: '.html'}}?q=" + q);
-        		document.title = q + ' ' + pageTitle;
-		})
-		searchControl.execute($.QueryString["q"]);
-	}, true);
-	function pushState(path) {
-		if (typeof(window.history.pushState) == 'function') {
-			window.history.pushState(null, path, path);
-		} else {
-			window.location.hash = '#!' + path;
-		}
-	}
-</script>
