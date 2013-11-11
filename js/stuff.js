@@ -14,7 +14,7 @@ waypointCallback = function () {
         offset: 70
     });
 }
-$.getScript('//cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.7.0/jquery.tocify.min.js', waypointCallback);
+$.getScript('//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', waypointCallback);
 
 // search autocomplete
 typeaheadCallback = function () {
@@ -52,7 +52,7 @@ if ($(".toc").length > 0) {
         });
     };
 
-    $.getScript('{{{ site.url }}/js/jquery-ui-1.9.1.custom.min.js', function () {
+    $.getScript('//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', function () {
         $.getScript('//cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.7.0/jquery.tocify.min.js', tocCallback);
     });
 }
