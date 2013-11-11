@@ -376,3 +376,6 @@ input.gsc-search-button {
 table.gsc-search-box {
 	width:100%;
 }
+.gsc-branding {
+	float:right;
+}
