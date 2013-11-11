@@ -24,8 +24,10 @@
         <!--li{% if page.slug == "contact" %} class="active"{% endif %}><a href="{{ site.url }}/contact">Contact</a></li-->
       </ul>
       <form action="{{ site.url }}/search" method="get" class="navbar-form navbar-right" role="search">
-		    <input class="form-control" type="search" name="q" placeholder="Enter keyword or phrase" autocomplete="off" id="search_control">
-		    <button type="submit" class="btn btn-primary" value="Search"><span class="fa fa-search"></span></button>
+        <div class="form-group">
+          <input class="form-control" type="search" name="q" placeholder="Enter keyword or phrase" autocomplete="off" id="search_control">
+          <button type="submit" class="btn btn-primary" value="Search"><span class="fa fa-search"></span></button>
+        </div>
       </form>
     </nav>
   </div>
