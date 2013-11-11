@@ -388,7 +388,7 @@ table.gsc-search-box {
 	margin: 20px 0;
 	border-radius: 4px;
 }
-..gsc-cursor-page {	
+.gsc-cursor-page {	
 	position: relative;
 	float: left;
 	padding: 6px 12px;
