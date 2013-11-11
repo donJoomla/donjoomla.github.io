@@ -18,18 +18,6 @@ $('#main').waypoint(function(direction) {
 	}
 }, { offset: 70 });
 
-// sticky footer
-$('#base').waypoint(function(direction) {
-	if(direction == 'down') {
-		$('#base').css('margin-top', $('footer').outerHeight() + 20 + 'px');
-		$('footer').addClass('affix');
-	}
-	else if(direction == 'up') {
-		$('#base').css('margin-top', '1px');
-		$('footer').removeClass('affix');
-	}
-}, { offset: 'bottom-in-view' });
-
 // iframe auto-height
 if($(".demoFrame").length>0) {
 	$(".demoFrame").iframeHeight();
