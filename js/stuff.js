@@ -1,5 +1,4 @@
----
----
+------
 // stuff for the things...
 
 // sticky header
@@ -33,7 +32,7 @@ typeaheadCallback = function () {
             }
         }
     })
-    .on('typeahead:selected', function (e) {
+        .on('typeahead:selected', function (e) {
         e.target.form.submit();
     });
 }
@@ -51,9 +50,9 @@ if ($(".toc").length > 0) {
             trigger: "hover"
         });
     };
-    
-    $.getScript('{{{ site.url }}/js/jquery-ui-1.9.1.custom.min.js', function() {
-    	$.getScript('{{ site.url }}/js/jquery.tocify.min.js', tocCallback);
+
+    $.getScript('{{{ site.url }}/js/jquery-ui-1.9.1.custom.min.js', function () {
+        $.getScript('{{ site.url }}/js/jquery.tocify.min.js', tocCallback);
     });
 }
 
@@ -81,3 +80,35 @@ if ($(".demoFrame").length > 0) {
         return b;
     })(window.location.search.substr(1).split('&'))
 })(jQuery);
+
+// change search urls
+function pushState(path) {
+    if (typeof (window.history.pushState) == 'function') {
+        window.history.pushState(null, path, path);
+    } else {
+        window.location.hash = '#!' + path;
+    }
+}
+
+// google custom search
+if ($("#search_results").length > 0) {
+    var jsapiCallback = function () {
+        var pageTitle = document.title;
+        google.load('search', '1', {
+            language: 'en',
+            nocss: true
+        });
+        google.setOnLoadCallback(function () {
+            var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
+            searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+            searchControl.draw(document.getElementById("search_results"));
+            searchControl.setSearchStartingCallback({}, function () {
+                var q = searchControl.getInputQuery();
+                pushState("{{page.url | remove: '.html'}}?q=" + q);
+                document.title = q + ' ' + pageTitle;
+            })
+            searchControl.execute($.QueryString["q"]);
+        }, true);
+    }
+    $.getScript('http://www.google.com/jsapi', jsapiCallback);
+}
