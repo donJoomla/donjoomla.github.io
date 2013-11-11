@@ -10,6 +10,7 @@ sitemap:
 <div id="search_results">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
+	var pageTitle = document.title;
 	google.load('search', '1', {language : 'en', nocss : true});
 	google.setOnLoadCallback(function() {
 		var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
@@ -19,6 +20,7 @@ sitemap:
 		searchControl.setSearchStartingCallback({}, function() {
         		var q =  searchControl.getInputQuery();
         		pushState("{{site.url}}/{{page.url | remove: '.html'}}?q=" + q);
+        		document.title = q + pageTitle;
 		})
 	}, true);
 	function pushState(path) {
