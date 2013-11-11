@@ -36,7 +36,7 @@
 	$(function () {
 		$('#search_control').typeahead([
 			{
-				remote: function (request, response) {
+				local: function (request, response) {
 				console.log(request);
 				console.log(response);
                   $.ajax({
