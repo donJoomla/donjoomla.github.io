@@ -21,7 +21,7 @@ sitemap:
         		pushState("{{page.url | remove: '.html'}}/?q=" + q);
 		})
 	}, true);
-	function pushState() {
+	function pushState(path) {
 		if (typeof(window.history.pushState) == 'function') {
 			window.history.pushState(null, path, path);
 		} else {
