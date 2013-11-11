@@ -18,7 +18,7 @@ sitemap:
 		searchControl.execute($.QueryString["q"]);
 		searchControl.setSearchStartingCallback({}, function() {
         		var q =  searchControl.getInputQuery();
-        		pushState('{{page.url}}/?q='+q);
+        		pushState("{{page.url | remove: '.html'}}/?q=" + q);
 		})
 	}, true);
 	function pushState() {
