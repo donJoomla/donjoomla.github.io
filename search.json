@@ -1,7 +1,7 @@
 ---
 ---
 [
-  {% for page in site.pages %}{% unless page.title == "" %}"{{ page.title }}",
+  {% for page in site.pages %}{% unless page.title == "" and page.title == site.name and page.title == 'search' %}"{{ page.title }}",
   {% endunless %}{% endfor %}{% for post in site.posts %}{% unless post.title == "" %}"{{ post.title }}",
   {% endunless %}{% endfor %}""
 ]
