@@ -10,10 +10,10 @@ sitemap:
 <div id="search_results">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
-  google.load('search', '1', {language : 'en', nocss : true, "callback" : cseBootstrap, num : 10});
+  google.load('search', '1', {language : 'en', nocss : true, "callback" : cseBootstrap});
   google.setOnLoadCallback(function() {
     var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
-    searchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+    searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET );
     searchControl.draw(document.getElementById("search_results"));
   }, true);
   function cseBootstrap() {
