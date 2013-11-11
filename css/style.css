@@ -1,7 +1,7 @@
 body {
 	color: #5a5a5a;
 	background:#f9f9f9;
-	margin-top:50px;
+	margin:50px 0 171px;
 	font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 a {
@@ -112,26 +112,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 #sidebar.affix {
   	position: static;
 }
-footer.affix {
-  	position: static;
-}
 @media (min-width: 992px) {
   	#sidebar .nav > .active > ul {
-    	display: block;
+    		display: block;
   	}
 	/* Widen the fixed sidebar */
   	#sidebar.affix,
 	#sidebar.affix-bottom {
-    	width: 213px;
+    		width: 213px;
   	}
 	#sidebar.affix {
 		position: fixed; /* Undo the static from mobile first approach */
 		top: 70px;
-  	}
-	footer.affix {
-  		position: fixed; /* Undo the static from mobile first approach */
-		bottom: 0;
-    	width:100%;
   	}
 	#sidebar.affix-bottom {
 		position: absolute; /* Undo the static from mobile first approach */
@@ -228,10 +220,13 @@ div + .box {
 footer {
 	padding-top: 40px;
 	padding-bottom: 30px;
-	margin-top: 20px;
 	color: #777;
 	border-top: 1px solid #eee;
 	background: #f5f5f5;
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
 }
 #disqus_thread {
 	overflow: hidden;
