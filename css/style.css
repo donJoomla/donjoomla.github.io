@@ -373,3 +373,9 @@ input.gsc-search-button {
 	-o-user-select: none;
 	user-select: none;
 }
+div.gsc-search-box {
+	margin:0 -15px;
+}
+.gsc-search-box td {
+	padding:15px;
+}
