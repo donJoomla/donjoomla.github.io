@@ -314,6 +314,7 @@ footer {
     line-height: 1.428571429;
     border: 1px solid transparent;
     border-radius:4px;
+    color:#ccc;
 }
 .gs-watermark, .gsc-resultsHeader, .gsc-tabsAreaInvisible, .gs-visibleUrl-short, .gsc-url-top, .gsc-thumbnail-inside {
 	display:none; 
