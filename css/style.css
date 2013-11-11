@@ -383,3 +383,25 @@ table.gsc-search-box {
 .gsc-branding {
 	float:right;
 }
+.gsc-cursor {
+	display: inline-block;
+	margin: 20px 0;
+	border-radius: 4px;
+}
+..gsc-cursor-page {	
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.428571429;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+.gsc-cursor-current-page {
+	z-index: 2;
+	color: #fff;
+	cursor: default;
+	background-color: #428bca;
+	border-color: #428bca;
+}
