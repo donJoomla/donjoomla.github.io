@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 div + .box {
 	margin-top:30px;
 }
-.box>h3 {
+.box > h3 {
 	border-bottom:3px solid #ff9833;
 	margin:0 0 15px;
 }
@@ -239,26 +239,29 @@ footer {
 }
 .social-buttons {
 	display: inline-block;
-	margin: 0;
 	padding: 0;
 	list-style: none;
 	float:right;
-	clear:right;
 }
 .social-buttons li {
 	display: inline-block;
 	line-height: 1;
 	padding: 0;
 }
-.social-buttons .twitter-follow-button {
-	width: 200px !important;
+.social-buttons .btn {
+	font: normal normal bold 13px 'Helvetica Neue',Arial,sans-serif;
+	height:28px;
+	padding:6px;
 }
-.social-buttons .twitter-share-button {
-	width: 80px !important;
+.social-buttons .fa-google-plus-square {
+	color:#DD4B39;
+	font-size: 18px;
+	margin: -2px 6px -8px 0;
+	float: left;
 }
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .tt-dropdown-menu {
@@ -401,7 +404,7 @@ table.gsc-search-box {
 .gsc-cursor-page:hover, .gsc-cursor-page:focus {
 	background-color: #eee;
 }
-.gsc-cursor-current-page {
+.gsc-cursor-current-page, .gsc-cursor-current-page:hover, .gsc-cursor-current-page:focus {
 	z-index: 2;
 	color: #fff;
 	cursor: default;
