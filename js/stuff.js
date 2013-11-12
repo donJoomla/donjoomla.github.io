@@ -60,7 +60,7 @@ if ($(".toc").length > 0) {
 // iframe auto-height
 if ($(".demoFrame").length > 0) {
     $.getScript('{{ site.url }}/js/iframeheight.min.js', function () {
-        $(".demoFrame").iframeHeight();
+        //$(".demoFrame").iframeHeight();
     });
     /*  should it be like this? I don't know...
     $(".demoFrame").each(function(index, element) {
