@@ -249,7 +249,7 @@ footer {
 	padding: 0;
 }
 .social-buttons .btn {
-	font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif;
+	font: normal normal bold 13px 'Helvetica Neue',Arial,sans-serif;
 	height:28px;
 }
 .twitter-typeahead .tt-query,
