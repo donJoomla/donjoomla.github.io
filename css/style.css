@@ -238,15 +238,15 @@ footer {
 	margin-bottom: -60px;
 }
 .social-buttons {
-	display: block;
-	margin: 0;
+	display: inline;
 	padding: 0;
 	list-style: none;
 	float:right;
 	clear:right;
+	white-space:nowrap;
 }
 .social-buttons li {
-	display: inline-block;
+	display: inline;
 	line-height: 1;
 	padding: 0;
 }
