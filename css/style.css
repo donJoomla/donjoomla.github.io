@@ -238,17 +238,19 @@ footer {
 	margin-bottom: -60px;
 }
 .social-buttons {
-	display: inline;
+	display: inline-block;
 	padding: 0;
 	list-style: none;
 	float:right;
-	clear:right;
-	white-space:nowrap;
 }
 .social-buttons li {
-	display: inline;
+	display: inline-block;
 	line-height: 1;
 	padding: 0;
+}
+.social-buttons .btn {
+	font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif;
+	height:28px;
 }
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
