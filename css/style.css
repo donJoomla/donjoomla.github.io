@@ -252,8 +252,11 @@ footer {
 	font: normal normal bold 13px 'Helvetica Neue',Arial,sans-serif;
 	height:28px;
 }
-.social-buttons .fa-google-plus-square:before {
+.social-buttons .fa-google-plus-square {
 	color:#DD4B39;
+	font-size: 18px;
+	margin: -2px 6px -8px -5px;
+	float: left;
 }
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
