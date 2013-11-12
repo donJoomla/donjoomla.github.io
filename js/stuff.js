@@ -100,6 +100,7 @@ if ($("#search_results").length > 0) {
             language: 'en',
             nocss: true
         });
+    }
         google.setOnLoadCallback(function () {
             var searchControl = new google.search.CustomSearchControl('014812861817308790526:-rrfwxely2g');
             searchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
@@ -111,7 +112,6 @@ if ($("#search_results").length > 0) {
             })
             searchControl.execute($.QueryString["q"]);
         }, true);
-    }
     $.getScript('http://www.google.com/jsapi', jsapiCallback);
 }
 
