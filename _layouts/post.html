@@ -5,14 +5,15 @@
   </head>
   
   <body>
-  {% include nav-main.html %}
-  <div class="container" id="main" role="main">
+{% include nav-main.html %}
+<div class="container">
+  <div id="main" role="main">
     <div class="row">
-      <div class="col-sm-8"> 
+      <div class="col-sm-8">
         <div class="post">
           <h1>{{ page.title }}</h1>
           {{ content }}
-          <hr>    
+          <hr>
           <div id="disqus_thread"></div>
           <script type="text/javascript">
               var disqus_shortname = 'donjoomla'; 
@@ -22,14 +23,15 @@
                   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
               })();
           </script>
-          <noscript>Please enable JavaScript to view the comments.</noscript>
+          <noscript>
+            Please enable JavaScript to view the comments.
+          </noscript>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="nav-menu">
           <ul class="nav nav-list">
-            <li><a href="{{ site.url }}/blog">All</a>
-            </li>
+            <li><a href="{{ site.url }}/blog">All</a> </li>
             {% for item in site.categories %}
             {% unless item[0] == 'blog' %} <li{% if page.categories contains item[0] %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a>
             </li>
@@ -41,17 +43,18 @@
           <h3>Archive</h3>
           <ul class="list-unstyled">
             {% for post in site.posts %}
-              {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-              {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
-              {% if month != nmonth %}
-                <li><a href="{{ site.url }}/blog/archive/#{{ post.date | date: "%B'%y" }}">{{ post.date | date: "%B %Y" }}</a></li>
-              {% endif %}
+            {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+            {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+            {% if month != nmonth %}
+            <li><a href="{{ site.url }}/blog/archive/#{{ post.date | date: "%B'%y" }}">{{ post.date | date: "%B %Y" }}</a></li>
+            {% endif %}
             {% endfor %}
           </ul>
         </div>
       </div>
     </div>
   </div>
-  {% include footer.html %}
+</div>
+{% include footer.html %}
   </body>
 </html>
