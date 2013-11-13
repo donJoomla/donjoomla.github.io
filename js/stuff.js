@@ -94,3 +94,9 @@ function pushState(path) {
 
 // twitter follow button
 $.getScript('//platform.twitter.com/widgets.js');
+
+
+// zopim chat
+$.getScript('//cdn.zopim.com/?14JibENISkzX2WdkicVa9c44GnlgSyGe');
+
+
