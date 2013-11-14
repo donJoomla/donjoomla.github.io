@@ -96,9 +96,30 @@ function pushState(path) {
 $.getScript('//platform.twitter.com/widgets.js');
 
 
-// zopim chat
+// zopim chat 
+/*
 $.getScript('//v2.zopim.com/?14JibENISkzX2WdkicVa9c44GnlgSyGe', function() {
     $zopim(function() {
         $zopim.livechat.button.show();
     });
 });
+*/
+window.$zopim||(function(d,s){
+    var z=$zopim=function(c){
+        z._.push(c)
+    },
+    $=z.s=d.createElement(s),
+    e=d.getElementsByTagName(s)[0];
+    z.set=function(o){
+        z.set._.push(o)
+    };
+    z._=[];
+    z.set._=[];
+    $.async=!0;
+    $.setAttribute('charset','utf-8');
+    $.src='//v2.zopim.com/?14JibENISkzX2WdkicVa9c44GnlgSyGe';
+    z.t=+new Date;
+    z.livechat.button.show();
+    $.type='text/javascript';
+    e.parentNode.insertBefore($,e)
+})(document,'script');
