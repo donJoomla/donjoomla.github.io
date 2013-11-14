@@ -97,13 +97,13 @@ $.getScript('//platform.twitter.com/widgets.js');
 
 
 // zopim chat 
-/*
 $.getScript('//v2.zopim.com/?14JibENISkzX2WdkicVa9c44GnlgSyGe', function() {
     $zopim(function() {
         $zopim.livechat.button.show();
     });
 });
-*/
+
+/*
 window.$zopim||(function(d,s){
     var z=$zopim=function(c){
         z._.push(c)
@@ -123,3 +123,4 @@ window.$zopim||(function(d,s){
     $.type='text/javascript';
     e.parentNode.insertBefore($,e)
 })(document,'script');
+*/
