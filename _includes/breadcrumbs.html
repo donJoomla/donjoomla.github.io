@@ -5,8 +5,8 @@
   {% assign crumbstotal = crumbs | size %}
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == 'index.html' %}
-    {% caputure previous %}{{ previous }}/{{ crumb| remove: '.html' }}{% endcapture %}
-  <li><a href="{{ site.url }}{{ crumb | remove: '.html' | capitalize }}">{{ crumb | remove: '.html' | capitalize }}</a></li>
+    {% capture previous %}{{ previous }}/{{ crumb| remove: '.html' }}{% endcapture %}
+  <li><a href="{{ previous }}">{{ crumb | remove: '.html' | capitalize }}</a></li>
     {% endunless %}
   {% endfor %}
 </ol>
