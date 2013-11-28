@@ -421,3 +421,22 @@ table.gsc-search-box {
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 }
+.gs-image img {
+	width:100px;
+}
+a.gs-image {
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+	display: inline-block;
+	display: block;
+	height: auto;
+	max-width: 100%;
+	padding: 4px;
+	margin-bottom: 20px;
+	line-height: 1.428571429;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
