@@ -6,7 +6,7 @@
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == 'index.html' %}
     {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
-  <li{% if forloop.last %} class="active"{% endif %}><a href="{{ previous }}">{{ forloop.index }} - {{ forloop.length }} - {{ crumb | remove: '.html' | capitalize }}</a></li>
+  <li{% if forloop.index - 1 = forloop.length %} class="active"{% endif %}><a href="{{ previous }}"></a>{{ crumb | remove: '.html' | capitalize }}</a></li>
     {% endunless %}
   {% endfor %}
 </ol>
