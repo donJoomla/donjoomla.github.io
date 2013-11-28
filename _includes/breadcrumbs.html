@@ -3,7 +3,7 @@
   <li><a href="#"><i class="icon-home"></i>Home</a> </li>
   {% assign crumbs = page.url | split: '/' %}
   {% assign crumbstotal = crumbs | size %}
-  {% for crumb in crumbs offset:0 %}
+  {% for crumb in crumbs offset:1 %}
     {% unless crumb == 'index.html' %}
   <li>{{ crumb | remove: '.html' }} </li>
     {% endunless %}
