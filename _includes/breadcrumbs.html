@@ -3,10 +3,11 @@
   <li><a href="#"><i class="icon-home"></i>Home</a> </li>
   {% assign crumbs = page.url | split: '/' %}
   {% assign crumbstotal = crumbs | size %}
+  {% assign activecrumb = crumbs | last %}
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == 'index.html' %}
     {% capture previous %}{{ previous }}/{{ crumb| remove: '.html' }}{% endcapture %}
-  <li><a href="{{ previous }}">{{ crumb | remove: '.html' | capitalize }}</a></li>
+  <li{% if crumb == activecrumb %} class="active"{% endif %}><a href="{{ previous }}">{{ crumb | remove: '.html' | capitalize }}</a></li>
     {% endunless %}
   {% endfor %}
 </ol>
