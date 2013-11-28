@@ -6,7 +6,11 @@
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == 'index.html' %}
     {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
-  <li typeof="v:Breadcrumb"{% if forloop.index == crumbstotal %} class="active"{% endif %}><a href="{{ previous }}" rel="v:url" property="v:title">{{ crumb | remove: '.html' | capitalize }}</a></li>
+  <li typeof="v:Breadcrumb"{% if forloop.index == crumbstotal %} class="active"{% endif %}>
+    <a href="{{ previous }}" rel="v:url" property="v:title">
+      {% if forloop.index == crumbstotal %}{{ page.title }}{% else %}{{ crumb | remove: '.html' | capitalize }}{% endif %}
+    </a>
+  </li>
     {% endunless %}
   {% endfor %}
 </ol>
