@@ -1,16 +1,11 @@
-{% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
-{% capture num_parts %}{{ url_parts | number_of_words }}{% endcapture %}
 {% assign previous="" %}
 <ol class="breadcrumb">
- {% if num_parts == "0" or num_parts == "-1" %}
-  <li><a href="/">home</a></li>
- {% else %}
-  <li><a href="/">home</a></li>
-  {% for unused in page.content limit:num_parts %}
-   {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
-   {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
-   <li><a href="{{previous}}">{{ first_word }}</a></li>
-   {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
+  <li><a href="#"><i class="icon-home"></i>Home</a> </li>
+  {% assign crumbs = page.url | split: '/' %}
+  {% assign crumbstotal = crumbs | size %}
+  {% for crumb in crumbs offset:2 %}
+    {% unless crumb == 'index.html' %}
+  <li><span class="divider">&#187;</span> {{ crumb | remove: '.html' }} </li>
+    {% endunless %}
   {% endfor %}
- {% endif %}
 </ol>
