@@ -1,8 +1,8 @@
 {% assign previous = site.url %}
 <ol class="breadcrumb">
   <li><a href="{{ site.url }}"><i class="icon-home"></i>Home</a> </li>
-  {% assign crumbs = page.url | split: '/' %}
-  {% assign crumbstotal = crumbs | size %}
+  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+  {% assign crumbstotal = crumbs | size | minus:1 %}
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == 'index.html' %}
     {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
