@@ -316,14 +316,17 @@ footer {
     font-size: 14px;
     line-height: 1.428571429;
     border: 1px solid transparent;
-    border-radius:4px;
-    color:#ccc;
+    border-radius: 4px;
+    color: #ccc;
 }
 .gs-watermark, .gsc-resultsHeader, .gsc-tabsAreaInvisible, .gs-visibleUrl-short, .gsc-url-top, .gsc-thumbnail-inside {
-	display:none; 
+	display: none; 
 }
 .gsc-result {
-	margin-top:15px;
+	margin-top: 15px;
+}
+.gsc-result td {
+	vertical-align: top;
 }
 .gs-title {
 	font-size: 24px;
@@ -332,7 +335,7 @@ footer {
 	width: 100%;
 }
 .gs-visibleUrl-long {
-	color:#468847;
+	color: #468847;
 }
 input.gsc-input{
 	display: block;
