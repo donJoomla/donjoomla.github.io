@@ -5,7 +5,7 @@
   {% assign crumbstotal = crumbs | size %}
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == 'index.html' %}
-  <li>{{ crumb | remove: '.html' }} </li>
+  <li>{{ crumb | remove: '.html' | capitalize }} </li>
     {% endunless %}
   {% endfor %}
 </ol>
