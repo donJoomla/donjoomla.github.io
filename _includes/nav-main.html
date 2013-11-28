@@ -10,8 +10,9 @@
         </li>
         <li{% if page.category == "extensions" %} class="active"{% endif %} class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li{% if page.slug == "extensions/jforms" %} class="active"{% endif %}> <a href="{{ site.url }}/extensions/jforms">JForms</a> <li{% if page.slug == "extensions/jforms/google-spreadsheets" %} class="active"{% endif %}> <a href="{{ site.url }}/extensions/jforms/google-spreadsheets">JForms Google Spreadsheets Plugin</a> <li{% if page.slug == "extensions/jforms/your-mailing-list-provider" %} class="active"{% endif %}> <a href="{{ site.url }}/extensions/jforms/your-mailing-list-provider">JForms YMLP Plugin</a>
-          </li>
+          <li{% if page.slug == "extensions/jforms" %} class="active"{% endif %}> <a href="{{ site.url }}/extensions/jforms">JForms</a></li>
+          <li{% if page.slug == "extensions/jforms/google-spreadsheets" %} class="active"{% endif %}> <a href="{{ site.url }}/extensions/jforms/google-spreadsheets">JForms Google Spreadsheets Plugin</a></li> 
+          <li{% if page.slug == "extensions/jforms/your-mailing-list-provider" %} class="active"{% endif %}> <a href="{{ site.url }}/extensions/jforms/your-mailing-list-provider">JForms YMLP Plugin</a></li>
         </ul>
         </li>
         <li{% if page.category == "docs" %} class="active"{% endif %} class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
@@ -19,7 +20,7 @@
           <li{% if page.slug == "docs/jforms" %} class="active"{% endif %}><a href="{{ site.url }}/docs/jforms">JForms</a></li>
         </ul>
         </li>
-        <li{% if post.categories[0] == "blog" or page.category == "blog" %} class="active"{% endif %}><a href="{{ site.url }}/blog">Blog</a></li>
+        <li{% if post.category contains "blog" or page.category == "blog" %} class="active"{% endif %}><a href="{{ site.url }}/blog">Blog</a></li>
         <li{% if page.slug == "about" %} class="active"{% endif %}><a rel="author" href="{{ site.url }}/about">About</a></li>
         <!--li{% if page.slug == "contact" %} class="active"{% endif %}><a href="{{ site.url }}/contact">Contact</a></li-->
       </ul>
