@@ -1,6 +1,6 @@
 {% assign previous = site.url %}
 <ol class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
-  <li><a href="{{ site.url }}"><i class="icon-home"></i>Home</a> </li>
+  <li typeof="v:Breadcrumb"><a href="{{ site.url }}" rel="v:url" property="v:title"><i class="icon-home"></i>{{ site.name }}</a> </li>
   {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
   {% assign crumbstotal = crumbs | size | minus:1 %}
   {% for crumb in crumbs offset:1 %}
