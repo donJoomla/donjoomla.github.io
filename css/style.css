@@ -322,9 +322,11 @@ footer {
 .gs-watermark, .gsc-resultsHeader, .gsc-tabsAreaInvisible, .gs-visibleUrl-short, .gsc-url-top, .gsc-thumbnail-inside {
 	display:none; 
 }
+.gsc-result {
+	margin-top:15px;
+}
 .gs-title {
 	font-size: 24px;
-	margin-top:15px;
 }
 .gsc-input {
 	width: 100%;
@@ -422,7 +424,7 @@ table.gsc-search-box {
 	border-bottom-right-radius: 4px;
 }
 .gs-image-box {
-	margin: 18px 9px 0 0;
+	margin: 3px 9px 0 0;
 }
 .gs-image img {
 	width:60px;
