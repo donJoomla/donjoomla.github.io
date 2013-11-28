@@ -1,5 +1,5 @@
 {% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
-{% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
+{% capture num_parts %}{{ url_parts | number_of_words }}{% endcapture %}
 {% assign previous="" %}
 <ol class="breadcrumb">
  {% if num_parts == "0" or num_parts == "-1" %}
