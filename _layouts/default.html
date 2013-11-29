@@ -37,12 +37,14 @@
   {% endif %}
   <div class="container">
     <div id="main" role="main">
-      {% include breadcrumbs.html %}
       <div class="row">
         <div class="col-md-3">
           <div id="sidebar" class="toc nav-menu"></div>
         </div>
-        <div class="col-md-9" role="main"> {{ content }} </div>
+        <div class="col-md-9" role="main">
+          {% include breadcrumbs.html %}
+          {{ content }}
+        </div>
       </div>
     </div>
   </div>
