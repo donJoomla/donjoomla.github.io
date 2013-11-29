@@ -4,13 +4,13 @@
   {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
   {% assign crumbstotal = crumbs | size | minus:1 %}
   {% for crumb in crumbs offset:1 %}
-    {% unless crumb == 'index.html' %}
     {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
-  <li typeof="v:Breadcrumb"{% if forloop.index == crumbstotal %} class="active"{% endif %}>
-    <a href="{{ previous }}" rel="v:url" property="v:title">
-      {% if forloop.index == crumbstotal %}{{ page.title }}{% else %}{{ crumb | remove: '.html' | capitalize }}{% endif %}
-    </a>
+    {% if forloop.index == crumbstotal %}
+  <li class="active">{{ page.title }}</a></li>
+    {% else %}
+  <li typeof="v:Breadcrumb">
+    <a href="{{ previous }}" rel="v:url" property="v:title">{{ crumb | remove: '.html' | capitalize }}</a>
   </li>
-    {% endunless %}
+    {% endif %}
   {% endfor %}
 </ol>
