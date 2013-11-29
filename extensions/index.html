@@ -11,7 +11,7 @@ sitemap:
 
   {% for post in site.pages %}
   {% if post.category == 'extensions' %}
-  {% assign posturl == post.url | remove: ''.html' | remove: 'index' %}
+  {% assign posturl == post.url | remove: '.html' | remove: 'index' %}
 <div class="media"><a class="pull-left thumbnail" href="{{ posturl }}"><img src="{{ post.image }}" alt="" width="90" height="90"></a>
   <div class="media-body">
     <h3 class="media-heading"><a href="{{ posturl }}">{{ post.title }}</a></h3>
