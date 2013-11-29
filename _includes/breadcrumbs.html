@@ -1,9 +1,9 @@
+{% assign postdate = page.date | date: "%Y/%m/%d/" %}
 {% assign previous = site.url %}
 <ol class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
   <li><a href="{{ site.url }}"><i class="icon-home"></i>Home</a> </li>
-  {% assign postdate = page.date | date: "%Y/%m/%d/" %}
   {% assign crumbsurl = page.url | remove:'/index.html' %}
-  {% assign crumbs = crumbsurl | remove: postdate | split: '/' %}
+  {% assign crumbs = crumbsurl | remove:postdate | split: '/' %}
   {% assign crumbstotal = crumbs | size | minus:1 %}
   {% for crumb in crumbs offset:1 %}
     {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
