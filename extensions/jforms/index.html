@@ -60,7 +60,7 @@ If you installed the JForms Full Package you already have this and just need to 
 <h2 class="page-header">Tutorials</h2>
 <ul>
   {% for post in site.posts %}
-  {% if post.categories contains 'tutorials' and post.tags contains page.title %}
+  {% if post.categories contains 'tutorials' and post.tags contains 'jforms' %}
   <li>
     <a href='{{post.url}}'>{{post.title}}</a>
     {{post.excerpt}}
