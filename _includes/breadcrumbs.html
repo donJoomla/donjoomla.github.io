@@ -1,11 +1,10 @@
-{% assign postdate = page.date | date: "%Y/%m/%d/" %}
 {% assign previous = site.url %}
 <ol class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
   <li><a href="{{ site.url }}"><i class="icon-home"></i>Home</a> </li>
-  {% assign crumbsurl = page.url | remove:'/index.html' %}
-  {% assign crumbs = crumbsurl | split: '/' %}
+  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
   {% assign crumbstotal = crumbs | size | minus:1 %}
   {% for crumb in crumbs offset:1 %}
+    {% unless crumb == page.date | date: "%Y" or  crumb == page.date | date: "%m" or  crumb == page.date | date: "%d"%}
     {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
     {% if forloop.index == crumbstotal %}
   <li class="active">{{ page.title }}</a></li>
@@ -14,5 +13,6 @@
     <a href="{{ previous }}" rel="v:url" property="v:title">{{ crumb | remove: '.html' | capitalize }}</a>
   </li>
     {% endif %}
+    {% endunless %}
   {% endfor %}
 </ol>
