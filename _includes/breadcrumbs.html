@@ -1,7 +1,7 @@
 {% assign previous = site.url %}
 <ol class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
   <li><a href="{{ site.url }}"><i class="icon-home"></i>Home</a> </li>
-  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+  {% assign crumbs = page.url | remove:'/index.html' | remove:page.date | date: "%Y/%m/%d/" | split: '/' %}
   {% assign crumbstotal = crumbs | size | minus:1 %}
   {% for crumb in crumbs offset:1 %}
     {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
@@ -13,4 +13,4 @@
   </li>
     {% endif %}
   {% endfor %}
-</ol>{{ page.date | date: "%Y/%m/%d" }}
+</ol>
