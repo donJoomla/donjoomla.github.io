@@ -8,6 +8,7 @@ sitemap:
     changefreq: monthly
     lastmod: 2013-11-29T01:15:00
 ---
+<h2 class="page-header">Extensions</h2>
 {% for post in site.pages %}
   {% if post.category == page.category and post.slug != post.category  %}
 <div class="media"><a class="pull-left thumbnail" href="{{ post.url | remove:'.html' | remove:'index' }}"><img src="{{ post.image }}" alt="" width="90" height="90"></a>
