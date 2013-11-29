@@ -11,10 +11,12 @@ sitemap:
 <h2 class="page-header">{{page.title}}</h2>
 {% for post in site.pages %}
   {% if post.category == page.category and post.slug != post.category  %}
+  
+{% capture itemurl %}{{post.url}}{% endcapture %}
 <div class="media"><a class="pull-left thumbnail" href="{{ post.url | remove:'.html' | remove:'index' }}"><img src="{{ post.image }}" alt="" width="90" height="90"></a>
   <div class="media-body">
     <h3 class="media-heading"><a href="{{ post.url | remove:'.html' | remove:'index' }}">{{ post.title }}</a></h3>
-    <p>{{ post.summary | replace 'URL', post.url }}.</p>
+    <p>{{ post.summary | replace 'URL', itemurl }}.</p>
   </div>
 </div>
   {% endif %}
