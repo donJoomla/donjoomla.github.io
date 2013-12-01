@@ -19,10 +19,11 @@ $.getScript('//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js',
 
 // search autocomplete
 typeaheadCallback = function () {
+    var partnerid = '014812861817308790526:-rrfwxely2g';
     $('#search_control').typeahead({
         prefetch: "{{ site.url }}/search.json",
         remote: {
-            url: "http://clients1.google.com/complete/search?q=%QUERY&hl=en&client=partner&source=gcsc&partnerid={014812861817308790526:-rrfwxely2g}&ds=cse&nocache=" + Math.random().toString(),
+            url: "http://clients1.google.com/complete/search?q=%QUERY&hl=en&client=partner&source=gcsc&partnerid=" + partnerid + "&ds=cse&nocache=" + Math.random().toString(),
             dataType: 'jsonp',
             filter: function (resp) {
                 return $.map(resp[1], function (item) {
