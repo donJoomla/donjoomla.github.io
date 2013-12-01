@@ -96,7 +96,7 @@ function pushState(path) {
 // twitter follow button
 $.getScript('//platform.twitter.com/widgets.js');
 
-
+/*
 // zopim chat
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
@@ -107,3 +107,4 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 $zopim(function() {
     $zopim.livechat.button.show();
 });
+*/
