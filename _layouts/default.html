@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>{% include header.html %}</head>
-  {% if page.category == 'extensions' or page.category == 'docs'%}
-  {% capture page.left.size %}3{% endcapture %}
-  {% capture page.left.content %}toc{% endcapture %}
-  {% endif %}
   <body>
   {% include nav-main.html %}
   {% if page.lead %}{% include top-lead.html %}{% endif %}
