@@ -15,7 +15,7 @@
   <div class="container">
     <div id="main" role="main">
       <div class="row">
-        {% if page.left %}
+        {% if leftcontent %}
         <div class="col-md-{{ leftsize }}">
           {% capture left %}side-{{ leftcontent }}.html{% endcapture %}
           {% include {{left}} %}
@@ -25,7 +25,7 @@
           {% include breadcrumbs.html %}
           {{ content }}
         </div>
-        {% if page.right %}
+        {% if rightcontent %}
         <div class="col-md-{{ rightsize }}">
           {% capture right %}side-{{ rightcontent }}.html{% endcapture %}
           {% include {{right}} %}
