@@ -7,7 +7,7 @@
   {% assign rightcontent = page.right.content %}
   {% if page.category == 'extensions' or page.category == 'docs'%}
   {% assign leftsize = 3 %}
-  {% assign leftcontent = toc %}
+  {% assign leftcontent = 'toc' %}
   {% endif %}
   <body>
   {% include nav-main.html %}
