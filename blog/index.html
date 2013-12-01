@@ -6,12 +6,11 @@ slug: blog
 sitemap:
     priority: 0.7
     changefreq: monthly
-    lastmod: 
+    lastmod: 2013-12-01T10:00:00Z
 right:
     size: 4
     content: blog
 ---
-{{site.categories.blog[0].date | date_to_xmlschema}}
 {% for post in site.categories.blog %}
     {% if post.categories contains {{page.slug}} %}
         <div class="box post">
