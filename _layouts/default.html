@@ -2,8 +2,8 @@
 <html lang="en">
   <head>{% include header.html %}</head>
   {% if page.category == 'extensions' or page.category == 'docs'%}
-  {% assign page.left.size = 3 %}
-  {% assign page.left.content = toc %}
+  {% capture page.left.size %}3{% endcapture %}
+  {% capture page.left.content %}toc{% endcapture %}
   {% endif %}
   <body>
   {% include nav-main.html %}
