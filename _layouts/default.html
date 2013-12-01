@@ -13,7 +13,7 @@
       <div class="row">
         {% if page.left %}
         <div class="col-md-{{ page.left.size }}">
-          {% include page.left.content %}
+          {% include {{page.left.content}} %}
         </div>
         {% endif %}
         <div class="col-md-{{ 12 | minus: page.left.size | minus: page.right.size }}" role="main">
