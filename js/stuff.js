@@ -21,7 +21,7 @@ $.getScript('//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js',
 typeaheadCallback = function () {
     var partnerid = '014812861817308790526:-rrfwxely2g';
     $('#search_control').typeahead({
-        //prefetch: "{{ site.url }}/search.json",
+        prefetch: "{{ site.url }}/search.json",
         remote: {
             url: "http://clients1.google.com/complete/search?q=%QUERY&hl=en&client=partner&source=gcsc&partnerid=" + partnerid + "&ds=cse&nocache=" + Math.random().toString(),
             dataType: 'jsonp',
