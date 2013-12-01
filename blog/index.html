@@ -11,6 +11,7 @@ right:
     size: 4
     content: blog
 ---
+{{site.categories.blog[0].date}}
 {% for post in site.categories.blog %}
     {% if post.categories contains {{page.slug}} %}
         <div class="box post">
