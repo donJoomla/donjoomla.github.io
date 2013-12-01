@@ -9,10 +9,6 @@
   {% assign leftsize = 3 %}
   {% assign leftcontent = 'toc' %}
   {% endif %}
-  {% if page.category == 'blog' and page.slug != 'archive'%}
-  {% assign leftsize = 3 %}
-  {% assign leftcontent = 'toc' %}
-  {% endif %}
   <body>
   {% include nav-main.html %}
   {% if page.lead %}{% include top-lead.html %}{% endif %}
