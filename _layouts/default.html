@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>{% include header.html %}</head>
-  {% capture left.size %}{{ page.left.size }}{% endcapture %}
-  {% capture right.size %}{{ page.right.size }}{% endcapture %}
-  {% capture left.content %}{{ page.left.content }}{% endcapture %}
-  {% capture right.content %}{{ page.right.content }}{% endcapture %}
-  {% capture page.left.content %}toc{% endcapture %}
   {% if page.category == 'extensions' or page.category == 'docs'%}
   {% capture page.left.size %}3{% endcapture %}
   {% capture page.left.content %}toc{% endcapture %}
@@ -22,7 +17,7 @@
           {% include {{left}} %}
         </div>
         {% endif %}
-        <div class="col-md-{{ 12 | minus: left.size | minus: right.size }}" role="main">
+        <div class="col-md-{{ 12 | minus: page.left.size | minus: page.right.size }}" role="main">
           {% include breadcrumbs.html %}
           {{ content }}
         </div>
