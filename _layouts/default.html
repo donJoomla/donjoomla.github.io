@@ -7,9 +7,11 @@
   <div class="container">
     <div id="main" role="main">
       <div class="row">
+        {% if page.category == "extensions" or page.category == "docs" or page.slug == "archive" %}
         <div class="col-md-3">
           <div id="sidebar" class="toc nav-menu"></div>
         </div>
+        {% endif %}
         <div class="col-md-9" role="main">
           {% include breadcrumbs.html %}
           {{ content }}
