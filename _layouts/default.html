@@ -16,7 +16,7 @@
           {% include {{page.left.content}} %}
         </div>
         {% endif %}
-        <div class="col-md-{{ 12 | minus: page.left.size | minus: page.right.size }}" role="main">
+        <div class="col-md-{{ 12 | minus: {{page.left.size}} | minus: {{page.right.size }}" role="main">
           {% include breadcrumbs.html %}
           {{ content }}
         </div>
