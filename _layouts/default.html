@@ -5,9 +5,7 @@
   </head>
   <body>
   {% include nav-main.html %}
-  {% if page.lead %}
-  {% include top-lead.html %}
-  {% endif %}
+  {% if page.lead %}{% include top-lead.html %}{% endif %}
   <div class="container">
     <div id="main" role="main">
       <div class="row">
