@@ -2,8 +2,8 @@
           <ul class="nav nav-list">
             <li><a href="{{ site.url }}/blog">All</a> </li>
             {% for item in site.categories %}
-            {% unless item[0] == 'blog' %} <li{% if page.categories contains item[0] %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a>
-            </li>
+            {% unless item[0] == 'blog' %} 
+            <li{% if page.categories contains item[0] %} class="active"{% endif %}><a href="{{ site.url }}/blog/{{ item[0] }}">{{ item[0] | capitalize }}</a></li>
             {% endunless %}
             {% endfor %}
           </ul>
