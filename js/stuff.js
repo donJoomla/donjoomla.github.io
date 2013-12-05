@@ -93,7 +93,7 @@ function pushState(path) {
     }
 }
 
-/*
+
 // twitter follow button
 $.getScript('//platform.twitter.com/widgets.js');
 
@@ -107,4 +107,3 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 $zopim(function() {
     $zopim.livechat.button.show();
 });
-*/
