@@ -93,7 +93,7 @@ function pushState(path) {
     }
 }
 
-/*
+
 // twitter follow button
 $.getScript('//platform.twitter.com/widgets.js');
 
@@ -107,6 +107,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 $zopim(function() {
     $zopim.livechat.button.show();
 });
+<<<<<<< HEAD
 */
 
 var switchTo5x = true;
@@ -122,3 +123,5 @@ $.getScript('//w.sharethis.com/button/buttons.js', function() {
         stButtons.getCount(url, service, document.getElementById(service + '_count'));
     });
 });
+=======
+>>>>>>> d70aff281543c3c5f8d4f3b99d7f1fa6d6f674c0
