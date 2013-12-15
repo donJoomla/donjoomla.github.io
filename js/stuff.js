@@ -108,3 +108,17 @@ $zopim(function() {
     $zopim.livechat.button.show();
 });
 */
+
+var switchTo5x = true;
+$.getScript('//w.sharethis.com/button/buttons.js', function() {
+	stLight.options({
+		publisher: "789dd053-d988-42a9-bd7b-1d9f3c14bc6f",
+		onhover: false
+	});
+	var url = $('link[name=canonical]').attr("href");
+	
+	$(".share-btn").each(function(i, e) {
+		var service = $(e).attr("data-service");
+        stButtons.getCount(url, service, document.getElementById(service + '_count'));
+    });
+});
