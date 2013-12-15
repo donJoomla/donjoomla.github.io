@@ -118,6 +118,6 @@ $.getScript('//w.sharethis.com/button/buttons.js', function() {
 	
 	$(".share-btn").each(function(i, e) {
 		var service = $(e).attr("data-service");
-        stButtons.getCount(url, service, document.getElementById(service + '_count'));
+        stButtons.getCount(url, service, $(e).find(".btn-bubble")[0]);
     });
 });
