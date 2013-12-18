@@ -3,6 +3,7 @@ description: Free, open-source Joomla! Extensions.
 baseurl: /
 image: http://donjoomla.com/images/donjoomla.png
 url: http://donjoomla.com
+locale: en_GB
 timezone: Europe/London
 mod_jforms:
     dl: https://github.com/donJoomla/jforms/releases/download/v1.6.2/mod_jforms_162_j25.zip
