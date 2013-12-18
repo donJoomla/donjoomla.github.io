@@ -1,5 +1,3 @@
----
----
 // stuff for the things...
 $.getScript('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js');
 
@@ -60,7 +58,7 @@ if ($(".toc").length > 0) {
 
 // iframe auto-height
 if ($(".demoFrame").length > 0) {
-	$.getScript('{{ site.url }}/js/iframeheight.min.js', function() {
+	$.getScript('/js/iframeheight.min.js', function() {
 		$(".demoFrame").iframeHeight();
 	});
 	/*  should it be like this? I don't know...
@@ -119,21 +117,29 @@ window.$zopim || (function(d, s) {
 	type = 'text/javascript';
 	e.parentNode.insertBefore($, e)
 })(document, 'script');
-
 $zopim(function() {
 	$zopim.livechat.button.show();
 });
 
-var switchTo5x = true;
-$.getScript('//w.sharethis.com/button/buttons.js', function() {
-	stLight.options({
-		publisher: "789dd053-d988-42a9-bd7b-1d9f3c14bc6f",
-		onhover: false
-	});
-	var url = $('link[name=canonical]').attr("href");
 
-	$(".share-btn").each(function(i, e) {
-		var service = $(e).attr("data-service");
-		stButtons.getCount(url, service, $(e).find(".btn-bubble")[0]);
-	});
-});
+/* Social Share */
+if ($(".js-share").length > 0) {
+	(function() {
+		$(".showSecondary").click(function(e) {
+			if ($(".js-share").hasClass("active")) {
+				$(".js-share").removeClass("active");
+			} else {
+				$(".js-share").addClass("active");
+			}
+		});
+		var shareUrl = $("link[rel=canonical]").attr("href");
+		$.ajaxSetup({ cache: true });
+		$.getJSON('http://share-count.appspot.com/?url=' + encodeURIComponent(shareUrl) + "&callback=?", function (data) {
+			shares = data.shares;
+			$(".count").each(function (index, el) {
+				var $service = $(el).parents(".js-share-btn").attr("data-service");
+				$(el).html(shares[$service]);
+			});
+		});
+	})();
+}
