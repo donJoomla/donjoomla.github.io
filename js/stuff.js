@@ -134,7 +134,7 @@ if ($(".js-share").length > 0) {
 		});
 		$(".js-share-btn a").click(function() {
 			var url = $(this).attr('href'),
-				width = 500,
+				width = 600,
 				height = 500,
 				left = (screen.width/2)-(width/2),
 				top = (screen.height/2)-(height/2);
