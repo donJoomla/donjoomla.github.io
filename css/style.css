@@ -580,6 +580,6 @@ a.gs-image {
 	font-family: 'icon';
 }
 
-fa .fa-stumbleupon:before {
+.fa .fa-stumbleupon:before {
 	content: "\e60b";
 }
