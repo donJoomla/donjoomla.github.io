@@ -1,6 +1,7 @@
 name: donJoomla
 description: Free, open-source Joomla! Extensions.
 baseurl: /
+image: http://donjoomla.com/images/donjoomla.png
 url: http://donjoomla.com
 timezone: Europe/London
 mod_jforms:
