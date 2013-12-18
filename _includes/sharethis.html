@@ -3,17 +3,17 @@
             <div class='js-share-btn js-total' data-service="total">
               <div class="count h4"></div>
               Shares </div>
-            <div class='js-share-btn' data-service="facebook"><a href="http://www.facebook.com/sharer.php?u={{ site.url }}/{{ page.url }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> <span class="hidden-xs">Share</span><span class="visible-lg">&nbsp;on Facebook</span></a></div>
-            <div class='js-share-btn' data-service="twitter"><a href="http://twitter.com/share?url={{ site.url }}/{{ page.url }}&text={{ page.title }}" class="btn btn-twitter"><i class="fa fa-twitter"></i> <span class="hidden-lg hidden-xs">Tweet</span><span class="visible-lg">Share on Twitter</span></a></div>
-            <div class='js-share-btn' data-service="googleplus"><a href="https://plus.google.com/share?url={{ site.url }}/{{ page.url }}" class="btn btn-google"><i class="fa fa-google-plus"></i> <span class="hidden-xs">Share</span><span class="visible-lg">&nbsp;on Google+</span></a></div>
+            <div class='js-share-btn' data-service="facebook"><a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" class="btn btn-facebook" target="_blank"><i class="fa fa-facebook"></i> <span class="hidden-xs">Share</span><span class="visible-lg">&nbsp;on Facebook</span></a></div>
+            <div class='js-share-btn' data-service="twitter"><a href="http://twitter.com/share?url={{ site.url }}{{ page.url }}&text={{ page.title }}" class="btn btn-twitter" target="_blank"><i class="fa fa-twitter"></i> <span class="hidden-lg hidden-xs">Tweet</span><span class="visible-lg">Share on Twitter</span></a></div>
+            <div class='js-share-btn' data-service="googleplus"><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="btn btn-google" target="_blank"><i class="fa fa-google-plus"></i> <span class="hidden-xs">Share</span><span class="visible-lg">&nbsp;on Google+</span></a></div>
           </div>
           <div class="secondary">
             <div class='js-share-btn' data-service="linkedin">
-              <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}/{{ page.url }}" class="btn btn-linkedin"><i class="fa fa-linkedin"></i></a></div>
+              <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}" class="btn btn-linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></div>
             <div class='js-share-btn' data-service="pinterest">
               <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" class="btn btn-pinterest"><i class="fa fa-pinterest"></i></a></div>
             <div class='js-share-btn' data-service="stumbleupon">
-              <a href="http://www.stumbleupon.com/submit?url={{ site.url }}/{{ page.url }}&title={{ page.title }}" class="btn btn-stumbleupon"><i class="fa fa-stumbleupon"></i></a></div>
+              <a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" class="btn btn-stumbleupon"><i class="fa fa-stumbleupon"></i></a></div>
           </div>
           <button class="btn btn-default showSecondary"></button>
         </div>

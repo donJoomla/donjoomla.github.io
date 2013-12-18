@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include header.html %}
-  </head>
-  
-  <body>
-{% include nav-main.html %}
-<div class="container">
-  <div id="main" role="main">
-    <div class="row">
-      <div class="col-sm-8">
-        {% include breadcrumbs.html %}
-        <div>
+---
+layout: default
+right: 
+    content: blog
+    size: 4
+---
           <h1>{{ page.title }}</h1>
 		  {% include sharethis.html %}
           {{ content }}
@@ -28,12 +20,3 @@
           <noscript>
             Please enable JavaScript to view the comments.
           </noscript>
-        </div>
-      </div>
-      <div class="col-sm-4">{% include side-blog.html %}</div>
-    </div>
-  </div>
-</div>
-{% include footer.html %}
-  </body>
-</html>

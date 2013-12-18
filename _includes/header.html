@@ -2,7 +2,7 @@
     {% else %}{% capture title %}{{ page.title }} &middot; {{ site.title }}{% endcapture %}{% endif %}
     {% if page.description %}{% capture description %}{{ page.description }}{% endcapture %}
     {% else %}{% capture description %}{{ site.description }}{% endcapture %}{% endif %}
-    {% if page.image %}{% capture image %}{{ site.baseurl }}{{ page.image }}{% endcapture %}
+    {% if page.image %}{% capture image %}{{ page.image }}{% endcapture %}
     {% else %}{% capture image %}{{ site.url }}{{ site.image }}{% endcapture %}{% endif %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
