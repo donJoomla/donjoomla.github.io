@@ -132,8 +132,8 @@ if ($(".js-share").length > 0) {
 				$(".js-share").addClass("active");
 			}
 		});
-		$(".js-share-btn a").click(function(e) {
-			var url = $(e).attr('href'),
+		$(".js-share-btn a").click(function() {
+			var url = $(this).attr('href'),
 				width = 300,
 				height = 400,
 				left = (screen.width/2)-(w/2),
