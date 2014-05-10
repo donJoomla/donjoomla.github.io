@@ -23,3 +23,6 @@ plg_jforms_googlespreadsheet:
 plg_jforms_ymlp: 
     dl: https://github.com/donJoomla/jforms/releases/download/v1.6.2/plg_jforms_ymlp_111_j25.zip
     ver: 1.1.1
+markdown: kramdown
+gems:
+  - jekyll-sitemap
