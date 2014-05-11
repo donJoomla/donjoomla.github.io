@@ -5,6 +5,9 @@ image: http://donjoomla.com/images/donjoomla.png
 url: http://donjoomla.com
 locale: en_GB
 timezone: Europe/London
+markdown: kramdown
+gems:
+  - jekyll-sitemap
 com_timeline:
     dl: https://github.com/donJoomla/com_timeline/releases/download/v1.0/com_timeline-1.0-J3.zip
     ver: 1.0
@@ -23,6 +26,3 @@ plg_jforms_googlespreadsheet:
 plg_jforms_ymlp: 
     dl: https://github.com/donJoomla/jforms/releases/download/v1.6.2/plg_jforms_ymlp_111_j25.zip
     ver: 1.1.1
-markdown: kramdown
-gems:
-  - jekyll-sitemap
