@@ -1,6 +1,7 @@
-    {% if page.title == site.name %}{% capture title %}{{ site.title }}{% endcapture %}
+    {% if page.title == site.title %}{% capture title %}{{ site.title }}{% endcapture %}
     {% else %}{% capture title %}{{ page.title }} &middot; {{ site.title }}{% endcapture %}{% endif %}
     {% if page.description %}{% capture description %}{{ page.description }}{% endcapture %}
+    {% elsif page.excerpt %}{% capture description %}{{ page.excerpt }}{% endcapture %}
     {% else %}{% capture description %}{{ site.description }}{% endcapture %}{% endif %}
     {% if page.image %}{% capture image %}{{ page.image }}{% endcapture %}
     {% else %}{% capture image %}{{ site.image }}{% endcapture %}{% endif %}
