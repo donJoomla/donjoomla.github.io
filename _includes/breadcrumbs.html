@@ -6,17 +6,24 @@
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 {% assign crumbstotal = crumbs | size | minus:1 %}
 
-<div xmlns:v="http://rdf.data-vocabulary.org/#">
 <ol class="breadcrumb">
-  <li><a href="{{ site.baseurl }}"><i class="icon-home"></i>Home</a></li>
+  <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a href="{{ site.baseurl }}" itemprop="url">
+	  <span itemprop="title"><i class="fa fa-home"></i>{{ site.name }}</span>
+	</a>
+  </li>
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == y or  crumb == m or  crumb == d %}
       {% capture previous %}{{ previous }}/{{ crumb | remove: '.html' }}{% endcapture %}
       {% if forloop.index == crumbstotal %}
-  <li class="active">{{ page.title }}</li>
+  <li class="active" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span itemprop="title">{{ page.title }}</span>
+  </li>
       {% else %}
-  <li typeof="v:Breadcrumb">
-    <a href="{{ previous }}" rel="v:url" property="v:title">{{ crumb | remove: '.html' | capitalize }}</a>
+  <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a href="{{ previous }}" itemprop="url">
+	  <span itemprop="title">{{ crumb | remove: '.html' | capitalize }}</span>
+	</a>
   </li>
       {% endif %}
     {% endunless %}
