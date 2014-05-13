@@ -120,36 +120,3 @@ window.$zopim || (function(d, s) {
 $zopim(function() {
 	$zopim.livechat.button.show();
 });
-
-
-/* Social Share */
-if ($(".js-share").length > 0) {
-	(function() {
-		$(".showSecondary").click(function(e) {
-			if ($(".js-share").hasClass("active")) {
-				$(".js-share").removeClass("active");
-			} else {
-				$(".js-share").addClass("active");
-			}
-		});
-		$(".js-share-btn a").click(function() {
-			var url = $(this).attr('href'),
-				width = 500,
-				height = 500,
-				left = (screen.width/2)-(width/2),
-				top = (screen.height/2)-(height/1.5);
-			newwindow=window.open(url, 'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+width+', height='+height+', top='+top+', left='+left);
-			if (window.focus) {newwindow.focus()}
-			return false;
-		});
-		var shareUrl = $("link[rel=canonical]").attr("href");
-		$.ajaxSetup({ cache: true });
-		$.getJSON('http://share-count.appspot.com/?url=' + encodeURIComponent(shareUrl) + "&callback=?", function (data) {
-			shares = data.shares;
-			$(".count").each(function (index, el) {
-				var $service = $(el).parents(".js-share-btn").attr("data-service");
-				$(el).html(shares[$service]);
-			});
-		});
-	})();
-}
