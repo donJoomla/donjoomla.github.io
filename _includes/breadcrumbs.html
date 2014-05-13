@@ -9,7 +9,8 @@
 <ol class="breadcrumb">
   <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
     <a href="{{ site.baseurl }}" itemprop="url">
-	  <span itemprop="title"><i class="fa fa-home"></i>{{ site.name }}</span>
+	  <i class="fa fa-home"></i>
+	  <span itemprop="title" class="sr-only">{{ site.name }}</span>
 	</a>
   </li>
   {% for crumb in crumbs offset:1 %}
