@@ -6,7 +6,8 @@
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 {% assign crumbstotal = crumbs | size | minus:1 %}
 
-<ol class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
+<div xmlns:v="http://rdf.data-vocabulary.org/#">
+<ol class="breadcrumb">
   <li><a href="{{ site.baseurl }}"><i class="icon-home"></i>Home</a></li>
   {% for crumb in crumbs offset:1 %}
     {% unless crumb == y or  crumb == m or  crumb == d %}
@@ -21,4 +22,5 @@
     {% endunless %}
   {% endfor %}
 </ol>
+</div>
 {% endunless %}
