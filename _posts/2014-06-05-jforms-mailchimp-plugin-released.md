@@ -4,7 +4,7 @@ title: jForms Mailchimp Plugin released
 categories: 
 - Blog
 - Releases
-image: http://donjoomla.com/images/extensions/extension_mailchimp.png
+image: http://donjoomla.com/images/extensions/jforms_mailchimp.png
 tag: 
 - JForms Module
 ---
