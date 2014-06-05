@@ -24,9 +24,9 @@ plg_jforms_googlespreadsheet:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_googlespreadsheet.zip
     ver: 1.2.1
 plg_jforms_ymlp: 
-    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_ymlp_111_j25.zip
+    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_ymlp.zip
     ver: 1.1.1
 plg_jforms_mailchimp: 
-    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_ymlp_111_j25.zip
+    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_mailchimp.zip
     ver: 1.1
 demo_url: http://donlabs.com/demo/j3/
