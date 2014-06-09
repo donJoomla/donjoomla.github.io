@@ -31,3 +31,10 @@ plg_jforms_mailchimp:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_mailchimp.zip
     ver: 1.1
 demo_url: http://donlabs.com/demo/j3/
+
+permalink: /:categories/:title.html
+disqus_shortname: donjoomla
+author: Adam Bouqdib
+gems:
+  - jekyll-sitemap
+relative_permalinks: false
