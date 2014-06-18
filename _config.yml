@@ -32,7 +32,6 @@ plg_jforms_mailchimp:
     ver: 1.1
 demo_url: http://donlabs.com/demo/j3/
 
-permalink: /:categories/:title.html
 disqus_shortname: donjoomla
 author: Adam Bouqdib
 gems:
