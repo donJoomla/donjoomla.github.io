@@ -21,7 +21,7 @@
           <li{% if page.slug == "docs/jforms" %} class="active"{% endif %}><a href="{{ site.baseurl }}docs/jforms">JForms</a></li>
         </ul>
         </li>
-        <li{% if post.category == "blog" or page.category == "blog" %} class="active"{% endif %}><a href="{{ site.baseurl }}blog">Blog</a></li>
+        <li{% if post.categories[0] == "blog" or page.category == "blog" %} class="active"{% endif %}><a href="{{ site.baseurl }}blog">Blog</a></li>
         <li{% if page.slug == "about" %} class="active"{% endif %}><a rel="author" href="{{ site.baseurl }}about">About</a></li>
         <!--li{% if page.slug == "contact" %} class="active"{% endif %}><a href="{{ site.baseurl }}contact">Contact</a></li-->
       </ul>
