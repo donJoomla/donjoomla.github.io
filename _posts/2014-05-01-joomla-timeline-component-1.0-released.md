@@ -4,7 +4,7 @@ title: Joomla Timeline Component 1.0 released
 categories: 
 - Blog
 - Releases
-image: http://donjoomla.com/images/donjoomla.png
+image: /images/donjoomla.png
 tag: 
 - Timeline
 ---

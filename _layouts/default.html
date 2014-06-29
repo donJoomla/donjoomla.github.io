@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>{% include header.html %}</head>
-  {% assign leftsize = page.left.size %}
-  {% assign leftcontent = page.left.content %}
-  {% assign rightsize = page.right.size %}
-  {% assign rightcontent = page.right.content %}
-  {% if page.category == 'extensions' or page.category == 'docs'%}
-  {% assign leftsize = 3 %}
-  {% assign leftcontent = 'toc' %}
-  {% endif %}
   <body>
-  {% include nav-main.html %}
-  {% if page.lead %}{% include top-lead.html %}{% endif %}
-  <div class="container">
-    <div id="main">
-      <div class="row">
-        {% if leftcontent %}
-        <div class="col-md-{{ leftsize }}">
-          {% capture left %}side-{{ leftcontent }}.html{% endcapture %}
-          {% include {{left}} %}
-        </div>
-        {% endif %}
-        <div class="col-md-{{ 12 | minus: leftsize | minus: rightsize }}" role="main">
-          {% include breadcrumbs.html %}
-          {{ content }}
-        </div>
-        {% if rightcontent %}
-        <div class="col-md-{{ rightsize }}">
-          {% capture right %}side-{{ rightcontent }}.html{% endcapture %}
-          {% include {{right}} %}
-        </div>
-        {% endif %}
+  {% include navbar.html %}
+  {% if page.top %}{% include modules.html module=page.top %}{% endif %}
+  <div class="container" id="main">
+    {% if page.left or page.right %}
+    <div class="row">
+      {% if page.left %}
+      <aside class="col-md-{{ page.left.size }}" role="complementary">
+        {% include modules.html module=page.left %}
+      </aside>
+      {% endif %}
+      <div class="col-md-{{ 12 | minus: page.left.size | minus: page.right.size }}" role="main">
+        {{ content }}
       </div>
+      {% if page.right %}
+      <aside class="col-md-{{ page.right.size }}" role="complementary">
+        {% include modules.html module=page.right %}
+      </aside>
+      {% endif %}
     </div>
+    {% else %}{{ content }}{% endif %}
   </div>
+  {% if page.bottom %}{% include modules.html module=page.bottom style="container" %}{% endif %}
   {% include footer.html %}
   </body>
 </html>

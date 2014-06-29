@@ -1,0 +1,10 @@
+        <ul class="box-list {{ include.params.class }} equal">
+          {% for item in site.data.extensions %}
+          <li>
+          <a class="box" href="{{ site.baseurl }}extensions/{{ item[1]["url"] }}">
+            <img src="{{ item[1]["image"] }}" alt="{{ item[1]["title"] }}" style="width:125px;"><br>
+                <h3 class="media-heading">{{ item[1]["title"] }}</h3>
+            <span class="text-muted">{{ item[1]["desc"] }}</span>
+          </a>
+          {% endfor %}
+        </ul>

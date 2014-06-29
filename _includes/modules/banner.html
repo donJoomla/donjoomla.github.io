@@ -1,0 +1,21 @@
+  {% if include.params.title %}{% capture title %}{{ include.params.title }}{% endcapture %}
+  {% elsif page.heading %}{% capture title %}{{ page.heading }}{% endcapture %}
+  {% else %}{% capture title %}{{ page.title }}{% endcapture %}{% endif %}
+  <div class="jumbotron blue">
+    <div class="container">
+      {% if page.version or page.compat %}
+      <div class="pull-right text-right">
+        Latest release: <span class="label label-success">v{{ page.version }}</span><br>
+        {% if page.compat %}
+        Compatible with: 
+        {% if page.compat.j25 %}<img src="{{ site.baseurl }}images/compat_25.png" alt="">{% endif %}
+        {% if page.compat.j30 %}<img src="{{ site.baseurl }}images/compat_30.png" alt="">{% endif %}
+        {% endif %}
+	    <br><br>
+        <a class="btn btn-lg btn-success" href="#Download" role="button"><span class="glyphicon glyphicon-save"></span> Download now</a>
+	  </div>
+      {% endif %}
+      <h1>{{ title }}</h1>
+      <p>{{ page.lead }}</p>
+	</div>
+  </div>

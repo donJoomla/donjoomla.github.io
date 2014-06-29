@@ -1,55 +1,49 @@
     {% if page.description %}{% capture description %}{{ page.description }}{% endcapture %}
-    {% elsif page.excerpt %}{% capture description %}{{ page.excerpt }}{% endcapture %}
+    {% elsif page.lead %}{% capture description %}{{ page.lead | strip_html }}{% endcapture %}
+    {% elsif page.excerpt %}{% capture description %}{{ page.excerpt | strip_html }}{% endcapture %}
     {% else %}{% capture description %}{{ site.description }}{% endcapture %}{% endif %}
-    {% if page.image %}{% capture image %}{{ page.image }}{% endcapture %}
-    {% else %}{% capture image %}{{ site.image }}{% endcapture %}{% endif %}
+    {% if page.keywords %}{% capture keywords %}{{ page.keywords }}{% endcapture %}
+    {% elsif page.tags %}{% capture keywords %}{{ page.tags | join: ', ' }}{% endcapture %}
+    {% else %}{% capture keywords %}{{ site.keywords }}{% endcapture %}{% endif %}
+    {% if page.image %}{% capture image %}{{ site.url }}{{ page.image }}{% endcapture %}
+    {% else %}{% capture image %}{{ site.url }}{{ site.image }}{% endcapture %}{% endif %}
+    {% if page.author %}{% capture author %}{{ page.author }}{% endcapture %}
+    {% else %}{% capture author %}{{ site.author }}{% endcapture %}{% endif %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>{{ page.title }} &middot; {{ site.title }}</title>
     <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon-precomposed" href="/images/touch-icon-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/touch-icon-76x76-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/touch-icon-120x120-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/touch-icon-152x152-precomposed.png">
-    <meta name="author" content="Adam Bouqdib">
+    <meta name="author" content="{{ author }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | remove:"index" | remove:".html" }}" />
     
-    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:image" content="{{ image }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:site_name" content="{{ site.title }}"/>
     <meta property="og:locale" content="{{ site.locale }}"/>
     <meta property="og:url" content="{{ site.url }}{{ page.url | remove:"index" | remove:".html" }}" />
+    {% if site.facebook_app %}<meta property="fb:app_id" content="{{ site.facebook_app }}" />{% endif %}
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@donjoomla"/>
+    <meta name="twitter:site" content="@{{ site.twitter }}"/>
     <meta name="twitter:domain" content="{{ site.url }}"/>
-    <meta name="twitter:creator" content="@abemedia"/>
+    <meta name="twitter:creator" content="@{{ site.twitter }}"/>
     
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css" />
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ site.baseurl }}css/pygments-manni.css" />
+    <link rel='stylesheet' href="{{ site.baseurl }}assets/style.css?{{ site.v }}" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <link href="{{ site.baseurl }}css/style.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,bold' rel='stylesheet' type='text/css' />
+    <!--link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:regular,bold' /-->
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}feed.xml">
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-22039203-4', 'donjoomla.com');
-	  ga('send', 'pageview');
-
-	</script>

@@ -2,8 +2,8 @@
 layout: default
 title: GNU GENERAL PUBLIC LICENSE
 left:
+    type: toc
     size: 3
-    content: toc
 ---
 GNU GENERAL PUBLIC LICENSE
 ==========================

@@ -1,0 +1,35 @@
+mod_jforms:
+    title: JForms Module
+    desc: Powerful AJAX forms for Joomla!
+    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/pkg_jforms.zip
+    ver: 1.6.5
+    url: jforms
+    image: /images/donjoomla.png
+plg_jforms_googlespreadsheet:
+    title: JForms Google Spreadsheet Plugin
+    desc: Save submitted JForms data to a Google Spreadsheet.
+    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_googlespreadsheet.zip
+    ver: 1.2.1
+    url: jforms/google-spreadsheets
+    image: /images/extensions/jforms_googlespreadsheets.jpg
+plg_jforms_mailchimp: 
+    title: JForms Mailchimp Plugin
+    desc: Subscribe to a Mailchimp list on form submission.
+    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_mailchimp.zip
+    ver: 1.1
+    url: jforms/mailchimp
+    image: /images/extensions/jforms_mailchimp.png
+plg_jforms_ymlp: 
+    title: JForms YMLP Plugin
+    desc: Subscribe to a YMLP mailing list on form submission.
+    dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_ymlp.zip
+    ver: 1.1.1
+    url: jforms/your-mailing-list-provider
+    image: /images/extensions/jforms_ymlp.png
+com_timeline:
+    title: Timeline
+    desc: Create stunning timelines using social media.
+    dl: https://github.com/donJoomla/com_timeline/releases/download/v1.0/com_timeline-1.0-J3.zip
+    ver: 1.0
+    url: timeline
+    image: /images/donjoomla.png

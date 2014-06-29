@@ -4,7 +4,7 @@ title: "donJoomla has launched! Hurray!"
 categories: 
   - Blog
   - Announcements
-image: "http://donjoomla.com/images/donjoomla.png"
+image: /images/donjoomla.png
 published: true
 ---
 

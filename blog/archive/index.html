@@ -3,13 +3,9 @@ layout: default
 title: Blog Archive
 category: blog
 slug: archive
-sitemap:
-    priority: 0.7
-    changefreq: monthly
-    lastmod: 2013-11-09T05:12:00
 left:
+    type: toc
     size: 3
-    content: toc
 ---
 <h1>Blog Archive</h1>
 {% for post in site.posts %}
@@ -28,7 +24,7 @@ left:
   {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
     {% if month != nmonth %}
       {% if forloop.index != 1 %}</ul>{% endif %}
-      <h3>{{ post.date | date: "%B '%y" }}</h3><ul>
+      <h3>{{ post.date | date: "%B %Y" }}</h3><ul>
     {% endif %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   <time>{{ post.date | date: "%e %B %Y" }}</time>
