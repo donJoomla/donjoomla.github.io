@@ -6,7 +6,7 @@
       <a class="navbar-brand" href="{{ site.baseurl }}"><img src="{{ site.baseurl }}images/logo.png" alt="{{ site.title }}"/></a>
     </div>
     <nav class="navbar-collapse collapse" role="navigation">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
         <li{% if page.slug == "home" %} class="active"{% endif %}><a href="{{ site.baseurl }}">Home</a>
         </li>
         <li class="dropdown{% if page.category == "extensions" %} active{% endif %}"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
@@ -24,11 +24,11 @@
         <li{% if page.categories[0] == "blog" or page.category == "blog" %} class="active"{% endif %}><a href="{{ site.baseurl }}blog">Blog</a></li>
         <li{% if page.slug == "about" %} class="active"{% endif %}><a rel="author" href="{{ site.baseurl }}about">About</a></li>
         <!--li{% if page.slug == "contact" %} class="active"{% endif %}><a href="{{ site.baseurl }}contact">Contact</a></li-->
-      </ul>
+      <<!--/ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="visible-lg"><a href="//twitter.com/donjoomla" target="_blank"><i class="icon-twitter"></i></a>
         <li class="visible-lg"><a href="//plus.google.com/+donjoomla/posts" target="_blank" rel="publisher"><i class="icon-google-plus"></i></a>
-        <li class="visible-lg"><a href="//facebook.com/donjoomla" target="_blank"><i class="icon-facebook"></i></a>
+        <li class="visible-lg"><a href="//facebook.com/donjoomla" target="_blank"><i class="icon-facebook"></i></a-->
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
           <div class="dropdown-menu">
           <form action="{{ site.baseurl }}search" method="get" class="navbar-form" role="search" style="white-space:nowrap;">

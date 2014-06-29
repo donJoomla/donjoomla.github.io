@@ -104,13 +104,10 @@ footer a:hover {
 }
 .nav a:hover .caret, .nav>li.open a .caret {
 }
-.navbar .navbar-right>li>a {
-	font-size: 22px !important;
-	background: none;
-}
 .navbar .navbar-right>li>a>i {
 	line-height:20px;
 	display:block;
+	font-size: 22px;
 }
 .navbar .navbar-right>li>a:hover {
 }
