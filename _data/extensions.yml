@@ -11,7 +11,7 @@ plg_jforms_googlespreadsheet:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_googlespreadsheet.zip
     ver: 1.2.1
     url: jforms/google-spreadsheets
-    image: /images/extensions/jforms_googlespreadsheets.jpg
+    image: /images/extensions/jforms_googlespreadsheets.png
 plg_jforms_mailchimp: 
     title: JForms Mailchimp Plugin
     desc: Subscribe to a Mailchimp list on form submission.
