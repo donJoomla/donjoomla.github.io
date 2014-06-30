@@ -119,10 +119,8 @@ body {
 .navbar-brand {
 	padding: 20px 15px;
 }
-.navbar .navbar-nav>li>a, .navbar .navbar-right a {
-	padding: 25px 15px;
-}
 .navbar .navbar-nav>li>a {
+	padding: 25px 15px;
 	font-size: 18px;
 }
 }
