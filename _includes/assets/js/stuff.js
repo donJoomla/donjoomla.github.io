@@ -134,9 +134,10 @@ if ($("#disqus_thread").length > 0) {
         }
     }
     
-    if(window.location.hash.indexOf('#comment') > 0) loadDisqus();
+    var commentsOffset = findTop(comments);
+    if(window.location.hash.indexOf('#comment') > 0 || window.pageYOffset > commentsOffset - 1500) loadDisqus();
     if(comments) {
-        var commentsOffset = findTop(comments);
+        if(!disqusLoaded && window.pageYOffset > commentsOffset - 1500) loadDisqus();
         window.onscroll = function() {
             if(!disqusLoaded && window.pageYOffset > commentsOffset - 1500) loadDisqus();
         }
