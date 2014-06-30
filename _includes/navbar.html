@@ -23,7 +23,7 @@
         </li>
         <li{% if page.categories[0] == "blog" or page.category == "blog" %} class="active"{% endif %}><a href="{{ site.baseurl }}blog">Blog</a></li>
         <li{% if page.slug == "about" %} class="active"{% endif %}><a rel="author" href="{{ site.baseurl }}about">About</a></li>
-        <li{% if page.slug == "contact" %} class="active"{% endif %}><a href="{{ site.baseurl }}contact">Contact</a></li>
+        <!--li{% if page.slug == "contact" %} class="active"{% endif %}><a href="{{ site.baseurl }}contact">Contact</a></li-->
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
           <div class="dropdown-menu">
           <form action="{{ site.baseurl }}search" method="get" class="navbar-form" role="search" style="white-space:nowrap;">
