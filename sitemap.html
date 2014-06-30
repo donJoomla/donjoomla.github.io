@@ -17,7 +17,7 @@ title: Sitemap
     <h3 class="media-heading">Extensions</h3>
     <ul class="list-unstyled">
       {% for post in site.data.extensions %}
-      <li><a href="{{ post.url[0] }}">{{ post.title[0] }}</a></li>
+      <li><a href="{{ post[0]["url"] }}">{{ post[0].["title"] }}</a></li>
       {% endfor %}
     </ul>
   </div>
