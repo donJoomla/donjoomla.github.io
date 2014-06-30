@@ -36,4 +36,4 @@ author: Adam Bouqdib
 gems:
   - jekyll-sitemap
 relative_permalinks: false
-v: 2c
+v: 3
