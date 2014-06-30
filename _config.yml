@@ -6,7 +6,7 @@ image: http://donjoomla.com/images/donjoomla.png
 url: http://donjoomla.com
 locale: en_GB
 timezone: Europe/London
-v: 4
+v: 5
 markdown: kramdown
 gems:
   - jekyll-sitemap
