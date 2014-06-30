@@ -6,6 +6,7 @@ image: http://donjoomla.com/images/donjoomla.png
 url: http://donjoomla.com
 locale: en_GB
 timezone: Europe/London
+v: 4
 markdown: kramdown
 gems:
   - jekyll-sitemap
@@ -36,4 +37,3 @@ author: Adam Bouqdib
 gems:
   - jekyll-sitemap
 relative_permalinks: false
-v: 3
