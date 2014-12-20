@@ -3,6 +3,7 @@ layout: default
 title: Privacy Policy
 left:
     type: toc
+    size: 3
 ---
 # Privacy Policy
 
