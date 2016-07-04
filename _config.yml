@@ -16,22 +16,22 @@ com_timeline:
 mod_jforms:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/mod_jforms.zip
     ver: 1.6.5
-pkg_jforms: 
+pkg_jforms:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/pkg_jforms.zip
     ver: 1.6.5
-plg_system_jforms: 
+plg_system_jforms:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_system_jforms.zip
     ver: 1.1.1
 plg_jforms_googlespreadsheet:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_googlespreadsheet.zip
     ver: 1.2.1
-plg_jforms_ymlp: 
+plg_jforms_ymlp:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_ymlp.zip
     ver: 1.1.1
-plg_jforms_mailchimp: 
+plg_jforms_mailchimp:
     dl: https://github.com/donJoomla/jforms/releases/download/1.6.5/plg_jforms_mailchimp.zip
     ver: 1.1
-demo_url: http://donlabs.com/demo/j3/
+demo_url: http://demo.donjoomla.com/
 disqus_shortname: donjoomla
 author: Adam Bouqdib
 gems:
