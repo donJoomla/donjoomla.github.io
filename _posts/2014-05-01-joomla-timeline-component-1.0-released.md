@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Joomla Timeline Component 1.0 released
-categories: 
-- Blog
-- Releases
+categories:
+- blog
+- releases
 image: /images/donjoomla.png
-tag: 
+tag:
 - Timeline
 ---
 It is with great pleasure that I can announce the release of our brand new **Joomla Timeline Component**.

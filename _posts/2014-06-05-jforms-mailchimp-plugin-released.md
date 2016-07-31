@@ -1,11 +1,11 @@
 ---
 layout: post
 title: jForms Mailchimp Plugin released
-categories: 
-- Blog
-- Releases
+categories:
+- blog
+- releases
 image: /images/extensions/jforms_mailchimp.png
-tag: 
+tag:
 - JForms Module
 ---
 Due to popular demand our **Joomla forms module** now also supports supports saving submitted form data to Mailchimp.
